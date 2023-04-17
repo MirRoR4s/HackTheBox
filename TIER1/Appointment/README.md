@@ -440,3 +440,18 @@ After pressing the log-in button, the exploit code is sent, and as suspected, we
 ![image-20230417162103493](image-20230417162103493.png)
 
 We successfully performed a primary SQL Injection and got the flag. Congratulations!
+
+## 答案
+
+1. Structured Query Language
+2. sql injection
+3. **personally identifiable information**
+4. **[A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/)** 
+5. Apache httpd 2.4.38 ((Debian))
+6. 443
+7. directory（我一直不太能区分文件夹和目录，所以这个题是在告诉我们文件夹在web应用行业内被称为目录？）
+8. 404
+9. dir
+10. #
+11. Congratulations
+12. e3d0796d002a446c0e622226f42e9672
