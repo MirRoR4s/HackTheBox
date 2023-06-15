@@ -1,0 +1,15 @@
+{
+  "name": "academy",
+  "version": "1.0.0",
+  "description": "1. [Introduction to Academy](https://academy.hackthebox.com/module/details/15)\r 2. [Learning Process](https://academy.hackthebox.com/module/details/9)\r 3. [Getting Started](https://academy.hackthebox.com/module/details/77)\r 4. [Setting Up](https://academy.hackthebox.com/module/details/87)\r 5.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "honkit": "^4.0.7"
+  }
+}
