@@ -1,10 +1,10 @@
 ---
-description: 正则表达式
+description: https://academy.hackthebox.com/module/18/section/2092
 ---
 
 # Regular Expressions
 
-Regular expressions (`RegEx`) are an art of expression language to search for patterns in text and files. They can be used to find and replace text, analyze data, validate input, perform searches, and more. In simple terms, they are a filter criterion that can be used to analyze and manipulate strings. They are available in various programming languages and programs and are used in many different ways and functions.
+Regular expressions (`RegEx`) are an art of expression language to search for patterns in text and files. They can be used to find and replace text, analyze data, validate input, perform searches, and more. In simple terms, they are a filter **criterion** that can be used to analyze and manipulate strings. They are available in various programming languages and programs and are used in many different ways and functions.
 
 A regular expression is a sequence of letters and symbols that form a search pattern. In addition, regular expressions can be created with patterns called metacharacters. Meta characters are symbols that define the search pattern but have no literal meaning. We can use it in tools like `grep` or `sed` or others. Often regex is implemented in web applications for the validation of user input.
 
@@ -16,13 +16,7 @@ Among other things, regex offers us the possibility to group the desired search 
 
 #### Grouping Operators
 
-|   | **Operators** | **Description**                                                                                                                                                             |
-| - | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 | `(a)`         | The round brackets are used to group parts of a regex. Within the brackets, you can define further patterns which should be processed together.                             |
-| 2 | `[a-z]`       | The square brackets are used to define character classes. Inside the brackets, you can specify a list of characters to search for.                                          |
-| 3 | `{1,10}`      | The curly brackets are used to define quantifiers. Inside the brackets, you can specify a number or a range that indicates how often a previous pattern should be repeated. |
-| 4 | `\|`          | Also called the OR operator and shows results when one of the two expressions matches                                                                                       |
-| 5 | `.*`          | Also called the AND operator and displayed results only if both expressions match                                                                                           |
+<table data-header-hidden><thead><tr><th width="108"></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>Operators</strong></td><td><strong>Description</strong></td></tr><tr><td>1</td><td><code>(a)</code></td><td>The round brackets are used to group parts of a regex. Within the brackets, you can define further patterns which should be processed together.</td></tr><tr><td>2</td><td><code>[a-z]</code></td><td>The square brackets are used to define character classes. Inside the brackets, you can specify a list of characters to search for.</td></tr><tr><td>3</td><td><code>{1,10}</code></td><td>The curly brackets are used to define <strong>quantifiers</strong>. Inside the brackets, you can specify a number or a range that indicates how often a previous pattern should be repeated.</td></tr><tr><td>4</td><td><code>|</code></td><td>Also called the OR operator and shows results when one of the two expressions matches</td></tr><tr><td>5</td><td><code>.*</code></td><td>Also called the AND operator and displayed results only if both expressions match</td></tr></tbody></table>
 
 Suppose we use the `OR` operator. The regex searches for one of the given search parameters. In the next example, we search for lines containing the word `my` or `false`. To use these operators, you need to apply the extended regex using the `-E` option in grep.
 
