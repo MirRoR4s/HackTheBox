@@ -4,7 +4,7 @@ description: https://academy.hackthebox.com/module/18/section/72
 
 # Package Management
 
-Whether working as a system administrator, maintaining our own Linux machines at home, or building/upgrading/maintaining our penetration testing distribution of choice, it is crucial to have a firm grasp on the available Linux package managers and the various ways to utilize them to install, update, or remove packages. Packages are archives that contain binaries of software, configuration files, information about dependencies and keep track of updates and upgrades. The features that most package management systems provide are:
+Whether working as a system administrator, maintaining our own Linux machines at home, or building/upgrading/maintaining our penetration testing distribution of choice, it is crucial to have a **firm grasp（牢固的掌握）**on the available Linux package managers and the various ways to utilize them to install, update, or remove packages. Packages are archives that contain binaries of software, configuration files, information about dependencies and keep track of updates and **upgrades（升级）**. The features that most package management systems provide are:
 
 * Package downloading
 * Dependency resolution
@@ -25,11 +25,9 @@ If an installed software has been deleted, the package management system then re
 | `snap`      | Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.                                                                                                                                                              |
 | `gem`       | Gem is the front-end to RubyGems, the standard package manager for Ruby.                                                                                                                                                                                                                                                                                |
 | `pip`       | Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation. |
-| `git`       | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.                                                                                                                                                                                  |
+| `git`       | Git is a fast, **scalable**, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.                                                                                                                                                                              |
 
 It is highly recommended to set up our virtual machine (VM) locally to experiment with it. Let us experiment a bit in our local VM and extend it with a few additional packages. First, let us install `git` by using `apt`.
-
-***
 
 **Advanced Package Manager (APT)**
 
@@ -39,7 +37,7 @@ Each Linux distribution uses software repositories that are updated often. When 
 
 &#x20; Advanced Package Manager (APT)
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ cat /etc/apt/sources.list.d/parrot.list
 
 # parrot repository
@@ -50,16 +48,15 @@ deb http://htb.deb.parrot.sh/parrot/ rolling-security main contrib non-free
 #deb-src https://deb.parrot.sh/parrot/ rolling-security main contrib non-free
 ```
 
-APT uses a database called the APT cache. This is used to provide information about packages installed on our system offline. We can search the APT cache, for example, to find all `Impacket` related packages.
+APT uses a database called the APT cache. This is used to provide information about packages installed on our system **offline**. We can search the APT cache, for example, to find all `Impacket` related packages.
 
-&#x20; Advanced Package Manager (APT)
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ apt-cache search impacket
 
 impacket-scripts - Links to useful impacket scripts examples
 polenum - Extracts the password policy from a Windows system
-python-pcapy - Python interface to the libpcap packet capture library (Python 2)
+python-pcapy - Pyth
+on interface to the libpcap packet capture library (Python 2)
 python3-impacket - Python3 module to easily build and dissect network protocols
 python3-pcapy - Python interface to the libpcap packet capture library (Python 3)
 ```
@@ -68,7 +65,7 @@ We can then view additional information about a package.
 
 &#x20; Advanced Package Manager (APT)
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ apt-cache show impacket-scripts
 
 Package: impacket-scripts
@@ -90,7 +87,7 @@ We can also list all installed packages.
 
 &#x20; Advanced Package Manager (APT)
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ apt list --installed
 
 Listing... Done
@@ -104,9 +101,7 @@ aircrack-ng/rolling,now 1:1.6-4 amd64 [installed,automatic]
 
 If we are missing some packages, we can search for it and install it using the following command.
 
-&#x20; Advanced Package Manager (APT)
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ sudo apt install impacket-scripts -y
 
 Reading package lists... Done
@@ -129,8 +124,6 @@ Removing duplicate launchers from Debian
 Launchers are updated
 ```
 
-***
-
 ### Git
 
 Now that we have `git` installed, we can use it to download useful tools from Github. One such project is called 'Nishang'. We will deal with and work with the project itself later. First, we need to navigate to the [project's repository](https://github.com/samratashok/nishang) and copy the Github link before using git to download it.
@@ -139,9 +132,7 @@ Now that we have `git` installed, we can use it to download useful tools from Gi
 
 Nevertheless, before we download the project and its scripts and lists, we should create a particular folder.
 
-&#x20; Advanced Package Manager (APT)
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ mkdir ~/nishang/ && git clone https://github.com/samratashok/nishang.git ~/nishang
 
 Cloning into '/opt/nishang/'...
@@ -159,9 +150,7 @@ Resolving deltas: 100% (1055/1055), done.
 
 We can also download the programs and tools from the repositories separately. In this example, we download 'strace' for Ubuntu 18.04 LTS.
 
-&#x20; Advanced Package Manager (APT)
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ wget http://archive.ubuntu.com/ubuntu/pool/main/s/strace/strace_4.21-1ubuntu1_amd64.deb
 
 --2020-05-15 03:27:17--  http://archive.ubuntu.com/ubuntu/pool/main/s/strace/strace_4.21-1ubuntu1_amd64.deb
@@ -178,9 +167,7 @@ strace_4.21-1ubuntu1_amd64.deb       100%[======================================
 
 Furthermore, now we can use both `apt` and `dpkg` to install the package. Since we have already worked with `apt`, we will turn to `dpkg` in the next example.
 
-&#x20; Advanced Package Manager (APT)
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ sudo dpkg -i strace_4.21-1ubuntu1_amd64.deb 
 
 (Reading database ... 154680 files and directories currently installed.)
@@ -192,9 +179,7 @@ Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
 
 With this, we have already installed the tool and can test if it works properly.
 
-&#x20; Advanced Package Manager (APT)
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ strace -h
 
 usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
@@ -211,3 +196,8 @@ Output format:
 **Optional Exercise:**
 
 Search for "evil-winrm" tool on Github and install it on our interactive instances. Try all the different installation methods.
+
+```bash
+mkdir ~/evil-winrm && git clone https://github.com/Hackplayers/evil-winrm.git ~/evil-winrm
+
+```

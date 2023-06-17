@@ -15,3 +15,4 @@
   * [System Management](linux-fundamentals/system-management/README.md)
     * [User Management](linux-fundamentals/system-management/user-management.md)
     * [Package Management](linux-fundamentals/system-management/package-management.md)
+    * [Service and Process Management](linux-fundamentals/system-management/service-and-process-management.md)
