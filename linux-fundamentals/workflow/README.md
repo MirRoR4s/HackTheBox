@@ -1,5 +1,3 @@
 # Workflow
 
-```
-// Some code
-```
+工作流。

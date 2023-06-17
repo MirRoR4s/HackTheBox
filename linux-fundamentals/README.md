@@ -1,2 +1,3 @@
 # LINUX FUNDAMENTALS
 
+学习Linux基础。
