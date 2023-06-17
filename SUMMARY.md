@@ -11,3 +11,6 @@
 * [LINUX FUNDAMENTALS](linux-fundamentals/README.md)
   * [Workflow](linux-fundamentals/workflow/README.md)
     * [Regular Expressions](linux-fundamentals/workflow/regular-expressions.md)
+    * [Permission Management](linux-fundamentals/workflow/permission-management.md)
+  * [System Management](linux-fundamentals/system-management/README.md)
+    * [User Management](linux-fundamentals/system-management/user-management.md)
