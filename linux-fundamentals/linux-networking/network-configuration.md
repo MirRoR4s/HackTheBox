@@ -174,27 +174,27 @@ These technologies are designed to provide different levels of access control an
 
 **Discretionary Access Control**
 
-DAC is a crucial component of modern security systems as it helps organizations provide access to their resources while managing the associated risks of unauthorized access. It is a widely used access control system that enables users to manage access to their resources by granting resource owners the responsibility of controlling access permissions to their resources. This means that users and groups who own a specific resource can decide who has access to their resources and what actions they are authorized to perform. These permissions can be set for reading, writing, executing, or deleting the resource.
+DAC is a crucial component of modern security systems as it helps organizations provide access to their resources while managing the associated risks of unauthorized access. **It is a widely used access control system that enables users to manage access to their resources by granting resource owners the responsibility of controlling access permissions to their resources.** This means that users and groups who own a specific resource can decide who has access to their resources and what actions they are authorized to perform. These permissions can be set for reading, writing, executing, or deleting the resource.
 
 **Mandatory Access Control**
 
-MAC is used in infrastructure that provides more fine-grained control over resource access than DAC systems. Those systems define rules that determine resource access based on the resource's security level and the user's security level or process requesting access. Each resource is assigned a security label that identifies its security level, and each user or process is assigned a security clearance that identifies its security level. Access to a resource is only granted if the user's or process's security level is equal to or greater than the security level of the resource. MAC is often used in operating systems and applications that require a high level of security, such as military or government systems, financial systems, and healthcare systems. MAC systems are designed to prevent unauthorized access to resources and minimize the impact of security breaches.
+MAC is used in infrastructure that provides more fine-grained control over resource access than DAC systems. Those systems define rules that determine resource access based on the resource's security level and the user's security level or process requesting access. Each resource is assigned a security label that identifies its security level, and each user or process is assigned a security **clearance** that identifies its security level. Access to a resource is only granted if the user's or process's security level is equal to or greater than the security level of the resource. MAC is often used in operating systems and applications that require a high level of security, such as military or government systems, financial systems, and **healthcare（医疗保健）** systems. MAC systems are designed to prevent unauthorized access to resources and minimize the impact of **security breaches（安全漏洞）**.
+
+MAC用于关键基础设施上，以提供比DAC系统更加细粒度的资源访问控制。MAC定义了某种规则，这个规则决定了基于资源的安全等级或是用户的安全等级或处理请求访问的资源访问。我们会给每一个资源分配一个安全标签以表明它的安全等级，然后也会给每一个用户或进程分配一个安全许可以表明他们的安全等级。仅当用户或进程的安全等级大于等于资源的安全等级时，才会授予对该资源的访问权限。MAC常被用于操作系统或是要求高等级的安全性的应用程序中，比如政府或军事系统、金融系统以及医疗保健系统。MAC系统旨在阻止对资源的未授权访问并最小化安全漏洞的影响。
 
 **Role-based Access Control**
 
-RBAC assigns permissions to users based on their roles within an organization. Users are assigned roles based on their job responsibilities or other criteria, and each role is granted a set of permissions that determine the actions they can perform. RBAC simplifies the management of access permissions, reduces the risk of errors, and ensures that users can access only the resources necessary to perform their job functions. It can restrict access to sensitive resources and data, limit the impact of security breaches, and ensure compliance with regulatory requirements. Compared to Discretionary Access Control (DAC) systems, RBAC provides a more flexible and scalable approach to managing resource access. In an RBAC system, each user is assigned one or more roles, and each role is assigned a set of permissions that define the user's actions. Resource access is granted based on the user's assigned role rather than their identity or ownership of the resource. RBAC systems are typically used in environments with many users and resources, such as large organizations, government agencies, and financial institutions.
+RBAC assigns permissions to users based on their roles within an organization. Users are assigned roles based on their job responsibilities or other criteria, and each role is granted a set of permissions that determine the actions they can perform. RBAC simplifies the management of access permissions, reduces the risk of errors, and ensures that users can access only the resources necessary to perform their job functions. It can restrict access to sensitive resources and data, limit the impact of security breaches, and ensure compliance with **regulatory** requirements. Compared to Discretionary Access Control (DAC) systems, RBAC provides a more flexible and scalable approach to managing resource access. In an RBAC system, each user is assigned one or more roles, and each role is assigned a set of permissions that define the user's actions. Resource access is granted based on the user's assigned role rather than their identity or ownership of the resource. RBAC systems are typically used in environments with many users and resources, such as large organizations, government agencies, and financial institutions.
 
-***
+RBAC会根据用户在组织内的角色给他们分配权限。基于用户的工作责任或其他准则为他们分配角色。RBAC会授予每个角色一个权限集以决定他们可以进行什么操作。RBAC简化了访问权限的管理，降低了错误的风险，确保用户只能访问执行他们的工作功能所需要的资源。RBAC限制了对敏感数据和资源的访问，限制了安全漏洞的影响，并确保符合法规要求。
 
 ### Monitoring
 
-Network monitoring involves capturing, analyzing, and interpreting network traffic to identify security threats, performance issues, and suspicious behavior. The primary goal of analyzing and monitoring network traffic is identifying security threats and vulnerabilities. For example, as penetration testers, we can capture credentials when someone uses an unencrypted connection and tries to log in to an FTP server. As a result, we will obtain this user’s credentials that might help us to infiltrate the network even further or escalate our privileges to a higher level. In short, by analyzing network traffic, we can gain insights into network behavior and identify patterns that may indicate security threats. Such analysis includes detecting suspicious network activity, identifying malicious traffic, and identifying potential security risks. However, we cover this vast topic in the [Intro to Network Traffic Analysis](https://academy.hackthebox.com/module/18/section/\[https:/academy.hackthebox.com/module/details/81]\(https://academy.hackthebox.com/module/details/81\)) module, where we use several tools for network monitoring on Linux systems like Ubuntu and Windows systems, like Wireshark, tshark, and Tcpdump.
-
-***
+Network monitoring involves capturing, analyzing, and interpreting network traffic to identify security threats, performance issues, and suspicious behavior. The primary goal of analyzing and monitoring network traffic is identifying security threats and vulnerabilities. For example, as penetration testers, we can capture credentials when someone uses an unencrypted connection and tries to log in to an FTP server. As a result, we will obtain this user’s credentials that might help us to **infiltrate（渗透）** the network even further or escalate our privileges to a higher level. In short, by analyzing network traffic, we can gain **insights（深刻见解）** into network behavior and identify patterns that may indicate security threats. Such analysis includes detecting suspicious network activity, identifying malicious traffic, and identifying potential security risks. However, we cover this vast topic in the [Intro to Network Traffic Analysis](https://academy.hackthebox.com/module/18/section/\[https:/academy.hackthebox.com/module/details/81]\(https://academy.hackthebox.com/module/details/81\)) module, where we use several tools for network monitoring on Linux systems like Ubuntu and Windows systems, like Wireshark, tshark, and Tcpdump.
 
 ### Troubleshooting
 
-Network troubleshooting is an essential process that involves diagnosing and resolving network issues that can adversely affect the performance and reliability of the network. This process is critical for ensuring the network operates optimally and avoiding disruptions that could impact business operations during our penetration tests. It also involves identifying, analyzing, and implementing solutions to resolve problems. Such problems include connectivity problems, slow network speeds, and network errors. Various tools can help us identify and resolve issues regarding network troubleshooting on Linux systems. Some of the most commonly used tools include:
+Network troubleshooting is an essential process that involves **diagnosing（诊断）** and resolving network issues that can adversely affect the performance and reliability of the network. This process is critical for ensuring the network operates optimally and avoiding **disruptions（突发事件）** that could impact business operations during our penetration tests. It also involves identifying, analyzing, and implementing solutions to resolve problems. Such problems include connectivity problems, slow network speeds, and network errors. Various tools can help us identify and resolve issues regarding network troubleshooting on Linux systems. Some of the most commonly used tools include:
 
 1. Ping
 2. Traceroute
@@ -207,17 +207,13 @@ By using these tools and others like them, we can better understand how the netw
 
 **Ping**
 
-&#x20; Ping
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ ping <remote_host>
 ```
 
 For example, pinging the Google DNS server will send ICMP packets to the Google DNS server and display the response times.
 
-&#x20; Ping
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ ping 8.8.8.8
 
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
@@ -235,9 +231,7 @@ Another tool is the `traceroute`, which traces the route packets take to reach a
 
 **Traceroute**
 
-&#x20; Traceroute
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ traceroute www.inlanefreight.com
 
 traceroute to www.inlanefreight.com (134.209.24.248), 30 hops max, 60 byte packets
@@ -253,7 +247,7 @@ When setting up a network connection, it's important to specify the destination 
 
 The second line shows the first hop in the traceroute, which is the local network gateway with the IP address 10.80.71.5, followed by the next three columns show the time it took for each of the three packets sent to reach the gateway in milliseconds (2.716 ms, 2.700 ms, and 2.730 ms).
 
-Next, we see the second hop in the traceroute. However, there was no response from the device at that hop, indicated by the three asterisks instead of the IP address. This could mean the device is down, blocking ICMP traffic, or a network issue caused the packets to drop.
+Next, we see the second hop in the traceroute. However, there was no response from the device at that hop, indicated by the three **asterisks（星号）** instead of the IP address. This could mean the device is down, blocking ICMP traffic, or a network issue caused the packets to drop.
 
 In the fourth line, we can see the third hop in the traceroute, consisting of two devices with IP addresses 10.80.68.175 and 10.80.68.161, and again the next three columns show the time it took for each of the three packets to reach the first device (7.147 ms, 7.132 ms, and 7.393 ms).
 
@@ -261,9 +255,7 @@ In the fourth line, we can see the third hop in the traceroute, consisting of tw
 
 `Netstat` is used to display active network connections and their associated ports. It can be used to identify network traffic and troubleshoot connectivity issues. To use `netstat`, we can enter the following command:
 
-&#x20; Netstat
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ netstat -a
 
 Active Internet connections (servers and established)
@@ -284,8 +276,6 @@ We can expect to receive detailed information about each connection when using t
 
 Each issue, along with common causes that may include misconfigured firewalls or routers, damaged network cables or connectors, incorrect network settings, hardware failure, incorrect DNS server settings, DNS server failure, misconfigured DNS records, network congestion, outdated network hardware, incorrectly configured network settings, unpatched software or firmware, and lack of proper security controls. Understanding these common network issues and their causes is important for effectively identifying and exploiting vulnerabilities in network systems during our testing.
 
-***
-
 ### Hardening
 
 Several mechanisms are highly effective in securing Linux systems in keeping our and other companies' data safe. Three such mechanisms are SELinux, AppArmor, and TCP wrappers. These tools are designed to safeguard Linux systems against various security threats, from unauthorized access to malicious attacks, especially while conducting a penetration test. There is almost no worse scenario than when a company is compromised due to a penetration test. By implementing these security measures and ensuring that we set up corresponding protection against potential attackers, we can significantly reduce the risk of data leaks and ensure our systems remain secure. While these tools share some similarities, they also have important differences.
@@ -300,8 +290,6 @@ Regarding similarities, the three security mechanisms share the common goal of e
 
 In terms of differences, SELinux and AppArmor are both MAC systems that provide fine-grained access control over system resources but work in different ways. SELinux is built into the kernel and is more complex to configure and use, while AppArmor is implemented as a module and is typically easier to use. On the other hand, TCP wrappers are a host-based network access control mechanism designed to restrict access to network services based on the IP address of the client system. It is a simpler mechanism than SELinux and AppArmor but is useful for limiting access to network services from unauthorized systems.
 
-***
-
 ### Setting Up
 
 As we navigate the world of Linux, we inevitably encounter a wide range of technologies, applications, and services that we need to become familiar with. This is a crucial skill, particularly if we work in cybersecurity and strive to improve our expertise continuously. For this reason, we highly recommend dedicating time to learning about configuring important security measures such as `SELinux`, `AppArmor`, and `TCP wrappers` on your own. By taking on this (optional but highly efficient) challenge, you'll deepen your understanding of these technologies, build up your problem-solving skills, and gain valuable experience that will serve you well in the future. We highly recommend to use a personal VM and make snapshots before making changes.
@@ -310,25 +298,12 @@ When it comes to implementing cybersecurity measures, there is no one-size-fits-
 
 **SELinux**
 
-|    |                                                                                                              |
-| -- | ------------------------------------------------------------------------------------------------------------ |
-| 1. | Install SELinux on your VM.                                                                                  |
-| 2. | Configure SELinux to prevent a user from accessing a specific file.                                          |
-| 3. | Configure SELinux to allow a single user to access a specific network service but deny access to all others. |
-| 4. | Configure SELinux to deny access to a specific user or group for a specific network service.                 |
+<table><thead><tr><th width="119"></th><th></th></tr></thead><tbody><tr><td>1.</td><td>Install SELinux on your VM.</td></tr><tr><td>2.</td><td>Configure SELinux to prevent a user from accessing a specific file.</td></tr><tr><td>3.</td><td>Configure SELinux to allow a single user to access a specific network service but deny access to all others.</td></tr><tr><td>4.</td><td>Configure SELinux to deny access to a specific user or group for a specific network service.</td></tr></tbody></table>
 
 **AppArmor**
 
-|    |                                                                                                               |
-| -- | ------------------------------------------------------------------------------------------------------------- |
-| 5. | Configure AppArmor to prevent a user from accessing a specific file.                                          |
-| 6. | Configure AppArmor to allow a single user to access a specific network service but deny access to all others. |
-| 7. | Configure AppArmor to deny access to a specific user or group for a specific network service.                 |
+<table><thead><tr><th width="85"></th><th></th></tr></thead><tbody><tr><td>5.</td><td>Configure AppArmor to prevent a user from accessing a specific file.</td></tr><tr><td>6.</td><td>Configure AppArmor to allow a single user to access a specific network service but deny access to all others.</td></tr><tr><td>7.</td><td>Configure AppArmor to deny access to a specific user or group for a specific network service.</td></tr></tbody></table>
 
 **TCP Wrappers**
 
-|     |                                                                                                    |
-| --- | -------------------------------------------------------------------------------------------------- |
-| 8.  | Configure TCP wrappers to allow access to a specific network service from a specific IP address.   |
-| 9.  | Configure TCP wrappers to deny access to a specific network service from a specific IP address.    |
-| 10. | Configure TCP wrappers to allow access to a specific network service from a range of IP addresses. |
+<table><thead><tr><th width="77"></th><th></th></tr></thead><tbody><tr><td>8.</td><td>Configure TCP wrappers to allow access to a specific network service from a specific IP address.</td></tr><tr><td>9.</td><td>Configure TCP wrappers to deny access to a specific network service from a specific IP address.</td></tr><tr><td>10.</td><td>Configure TCP wrappers to allow access to a specific network service from a range of IP addresses.</td></tr></tbody></table>
