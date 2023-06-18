@@ -10,7 +10,7 @@ Apache offers the possibility to create web pages dynamically using server-side 
 
 &#x20;&#x20;
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ apt install apache2 -y
 
 Reading package lists... Done
@@ -42,7 +42,7 @@ This is the default page after installation and serves to confirm that the webse
 
 &#x20;&#x20;
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ curl http://localhost
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -69,7 +69,7 @@ An alternative to curl is the tool `wget`. With this tool, we can download files
 
 &#x20;&#x20;
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ wget http://localhost
 
 --2020-05-15 17:43:52--  http://localhost/
@@ -92,7 +92,7 @@ Another option that is often used when it comes to data transfer is the use of P
 
 &#x20;&#x20;
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ python3 -m http.server
 
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
@@ -104,7 +104,7 @@ We can see what requests were made if we now look at our Python 3 web server's e
 
 &#x20;&#x20;
 
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ python3 -m http.server
 
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
@@ -120,4 +120,10 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
 Answer the question(s) below to complete this Section and earn cubes!
 
-Cheat Sheet+ 1  Find a way to start a simple HTTP server inside Pwnbox or your local VM using "npm". Submit the command that starts the web server on port 8080 (use the short argument to specify the port number). Submit Hint+ 0  Find a way to start a simple HTTP server inside Pwnbox or your local VM using "php". Submit the command that starts the web server on the localhost (127.0.0.1) on port 8080.\
+\+ 1  Find a way to start a simple HTTP server inside Pwnbox or your local VM using "npm". Submit the command that starts the web server on port 8080 (use the short argument to specify the port number).&#x20;
+
+{% embed url="https://www.npmjs.com/package/http-server" %}
+
+\+ 0  Find a way to start a simple HTTP server inside Pwnbox or your local VM using "php". Submit the command that starts the web server on the localhost (127.0.0.1) on port 8080.
+
+{% embed url="https://www.php.net/manual/zh/features.commandline.webserver.php" %}

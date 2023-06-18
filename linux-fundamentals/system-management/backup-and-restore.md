@@ -26,9 +26,7 @@ In order to install Rsync on Ubuntu, we can use the `apt` package manager:
 
 **Install Rsync**
 
-&#x20; Install Rsync
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ sudo apt install rsync -y
 ```
 
@@ -36,21 +34,24 @@ This will install the latest version of Rsync on the system. Once the installati
 
 **Rsync - Backup a local Directory to our Backup-Server**
 
-&#x20; Rsync - Backup a local Directory to our Backup-Server
-
-```shell-session
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 MirRoR4s@htb[/htb]$ rsync -av /path/to/mydirectory user@backup_server:/path/to/backup/directory
+# backup: rsync -av locald server
 ```
+{% endcode %}
 
 This command will copy the entire directory (`/path/to/mydirectory`) to a remote host (`backup_server`), to the directory `/path/to/backup/directory`. The option `archive` (`-a`) is used to preserve the original file attributes, such as permissions, timestamps, etc., and using the `verbose` (`-v`) option provides a detailed output of the progress of the `rsync` operation.
 
-We can also add additional options to customize the backup process, such as using compression and incremental backups. We can do this like the following:
+We can also add additional options to customize the backup process, such as using compression and **incremental** backups. We can do this like the following:
 
 &#x20; Rsync - Backup a local Directory to our Backup-Server
 
-```shell-session
+{% code overflow="wrap" %}
+```bash
 MirRoR4s@htb[/htb]$ rsync -avz --backup --backup-dir=/path/to/backup/folder --delete /path/to/mydirectory user@backup_server:/path/to/backup/directory
 ```
+{% endcode %}
 
 With this, we back up the `mydirectory` to the remote `backup_server`, preserving the original file attributes, timestamps, and permissions, and enabled compression (`-z`) for faster transfers. The `--backup` option creates incremental backups in the directory `/path/to/backup/folder`, and the `--delete` option removes files from the remote host that is no longer present in the source directory.
 
@@ -58,13 +59,11 @@ If we want to restore our directory from our backup server to our local director
 
 **Rsync - Restore our Backup**
 
-&#x20; Rsync - Restore our Backup
-
-```shell-session
+{% code overflow="wrap" %}
+```bash
 MirRoR4s@htb[/htb]$ rsync -av user@remote_host:/path/to/backup/directory /path/to/mydirectory
 ```
-
-***
+{% endcode %}
 
 ### Encrypted Rsync
 
@@ -72,15 +71,13 @@ To ensure the security of our `rsync` file transfer between our local host and o
 
 **Secure Transfer of our Backup**
 
-&#x20; Secure Transfer of our Backup
-
-```shell-session
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 MirRoR4s@htb[/htb]$ rsync -avz -e ssh /path/to/mydirectory user@backup_server:/path/to/backup/directory
 ```
+{% endcode %}
 
-The data transfer between our local host and the backup server occurs over the encrypted SSH connection, which provides confidentiality and integrity protection for the data being transferred. This encryption process ensures that the data is protected from any potential malicious actors who would otherwise be able to access and modify the data without authorization. The encryption key itself is also safeguarded by a comprehensive set of security protocols, making it even more difficult for any unauthorized person to gain access to the data. In addition, the encrypted connection is designed to be highly resistant to any attempts to breach security, allowing us to have confidence in the protection of the data being transferred.
-
-***
+The data transfer between our local host and the backup server occurs over the encrypted SSH connection, which provides confidentiality and integrity protection for the data being transferred. This encryption process ensures that the data is protected from any potential malicious actors who would otherwise be able to access and modify the data without authorization. The encryption key itself is also **safeguarded** by a comprehensive set of security protocols, making it even more difficult for any unauthorized person to gain access to the data. In addition, the encrypted connection is designed to be highly resistant to any attempts to breach security, allowing us to have confidence in the protection of the data being transferred.
 
 ### Auto-Synchronization
 
@@ -90,19 +87,17 @@ Therefore we create a new script called `RSYNC_Backup.sh`, which will trigger th
 
 **RSYNC\_Backup.sh**
 
-Code: bash
-
+{% code overflow="wrap" %}
 ```bash
 #!/bin/bash
 
 rsync -avz -e ssh /path/to/mydirectory user@backup_server:/path/to/backup/directory
 ```
+{% endcode %}
 
 Then, in order to ensure that the script is able to execute properly, we must provide the necessary permissions. Additionally, it's also important to make sure that the script is owned by the correct user, as this will ensure that only the correct user has access to the script and that the script is not tampered with by any other user.
 
-&#x20; RSYNC\_Backup.sh
-
-```shell-session
+```bash
 MirRoR4s@htb[/htb]$ chmod +x RSYNC_Backup.sh
 ```
 
@@ -110,9 +105,7 @@ After that, we can create a crontab that tells `cron` to run the script every ho
 
 **Auto-Sync - Crontab**
 
-&#x20; Auto-Sync - Crontab
-
-```shell-session
+```bash
 0 * * * * /path/to/RSYNC_Backup.sh
 ```
 

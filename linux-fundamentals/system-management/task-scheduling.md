@@ -115,6 +115,8 @@ The fourth task, `backups`, is to be executed every Sunday at midnight. This is 
 
 It is also possible to receive notifications when a task is executed successfully or unsuccessfully. In addition, we can create logs to monitor the execution of the tasks.
 
+> 看完可能还是有些懵，比如如何编辑crontab文件？这个文件在哪里？如何打开？没关系。输入 crontab -h 查看帮助菜单就知道了。
+
 ### Systemd vs. Cron
 
 Systemd and Cron are both tools that can be used in Linux systems to schedule and automate processes. The key difference between these two tools is how they are configured. With Systemd, you need to create a timer and services script that tells the operating system when to run the tasks. On the other hand, with Cron, you need to create a `crontab` file that tells the cron daemon when to run the tasks.
@@ -125,6 +127,6 @@ Answer the question(s) below to complete this Section and earn cubes!
 
 \+ 0  What is the type of the service of the "syslog.service"?
 
-这个问题很抽象，反之你需要查看systemctl命令的文档。
+这个问题很抽象，反之你需要查看systemctl命令的文档。（看了好像也没啥用，我真服了这个问题）
 
 {% embed url="https://www.freedesktop.org/software/systemd/man/systemctl.html" %}
