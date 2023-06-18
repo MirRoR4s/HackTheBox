@@ -22,3 +22,6 @@
     * [Backup and Restore](linux-fundamentals/system-management/backup-and-restore.md)
     * [File System Management](linux-fundamentals/system-management/file-system-management.md)
     * [Containerization](linux-fundamentals/system-management/containerization.md)
+  * [Linux Networking](linux-fundamentals/linux-networking/README.md)
+    * [Network Configuration](linux-fundamentals/linux-networking/network-configuration.md)
+    * [Remote Desktop Protocols in Linux](linux-fundamentals/linux-networking/remote-desktop-protocols-in-linux.md)
