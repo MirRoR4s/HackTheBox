@@ -6,7 +6,11 @@ description: https://academy.hackthebox.com/module/18/section/2098
 
 As a penetration tester, one of the key skills required is configuring and managing network settings on Linux systems. This skill is valuable in setting up testing environments, controlling network traffic, or identifying and exploiting vulnerabilities. By understanding Linux's network configuration options, we can tailor our testing approach to suit our specific needs and optimize our results.
 
+作为一名渗透测试人员，要掌握的一门核心技能就是懂得如何配置和管理Linux系统的网络设置。当在搭建测试环境、控制网络流量或是发现和利用漏洞时，这门技能就可以派上用场。通过理解Linux的网络配置选项，可以调整渗透测试方法以满足特定的需要并对相关结果进行优化。
+
 One of the primary network configuration tasks is configuring network interfaces. This includes assigning IP addresses, configuring network devices such as routers and switches, and setting up network protocols. It is essential to thoroughly understand the network protocols and their specific use cases, such as TCP/IP, DNS, DHCP, and FTP. Additionally, we should be familiar with different network interfaces, including wireless and wired connections, and be able to troubleshoot connectivity issues.
+
+配置网络接口是主要的网络配置任务之一。这项任务包括分配IP地址、配置如路由器和交换器等的网络设备以及建立网络协议。彻底地理解网络协议及其相应的用途是十分重要的，如TCP/IP、DNS、DHCPFTP等协议。此外，应熟悉不同的网络接口，包括无线的和有线的，同时也要能够学会排查网络连接问题。
 
 Network access control is another critical component of network configuration. As a penetration testers, we should be familiar with the importance of NAC for network security and the different NAC technologies available. These include:
 
@@ -14,11 +18,23 @@ Network access control is another critical component of network configuration. A
 * Mandatory access control (MAC)
 * Role-based access control (RBAC)
 
+网络配置的另一个重要部分为网络访问控制。作为一名渗透测试人员，我们应知晓网络安全NAC和不同的NAC技术的重要性，这些技术包括：
+
+* 自主访问控制（DAC）
+* 强制访问控制（MAC）
+* 基于角色的访问控制（RBAC）
+
 We should also understand the different NAC enforcement mechanisms and know how to configure Linux network devices for NAC. This includes setting up SELinux policies, configuring AppArmor profiles, and using TCP wrappers to control access.
+
+我们也应理解不同的NAC实现机制，并知道如何给Linux的网络设备配置NAC。这些配置包括建立SELinux策略，配置AppArmor配置文件以及使用TCP wrappers进行访问控制。
 
 Monitoring network traffic is also an essential part of network configuration. Therefore, we should know how to configure network monitoring and logging and be able to analyze network traffic for security purposes. Tools such as syslog, rsyslog, ss, lsof, and the ELK stack can be used to monitor network traffic and identify security issues.
 
+监视网络流量也是网络配置的另一个重要部分。所以，我们应知道如何配置网络流量监视和记录，并能够以安全为目的分析网络流量。分析流量的工具有syslog、rsyslog、ss、lsof、EKL等，这些工具可以帮助我们监视网络流量并发现安全问题。
+
 Moreover, good knowledge of network troubleshooting tools is crucial for identifying vulnerabilities and interacting with other networks and hosts. In addition to the tools we mentioned, we can use ping, nslookup, and nmap to diagnose and enumerate networks. These tools can provide valuable insight into network traffic, packet loss, latency, DNS resolution, etc. By understanding how to use these tools effectively, we can quickly pinpoint the root cause of any network problem and take the necessary steps to resolve it.
+
+此外，熟悉网络排错工具对发现漏洞和与其他网络和主机进行交互是十分重要的。除了上述我们提到的工具之外，我们还可以使用ping、nslookup、nmap等工具来诊断和列举网络。这些工具能为我们提供有关网络流量、丢包率、DNS解析等有价值的信息。通过理解如何高效地使用这些工具，我们可以快速地查明任意网络问题发生的原因并采取必要的措施解决它。
 
 ### Configuring Network Interfaces
 
