@@ -36,19 +36,19 @@ Not all components are required to access a resource. The main mandatory fields 
 
 The diagram above presents the anatomy of an HTTP request at a very high level. The first time a user enters the URL (`inlanefreight.com`) into the browser, it sends a request to a DNS (Domain Name Resolution) server to resolve the domain and get its IP. The DNS server looks up the IP address for `inlanefreight.com` and returns it. All domain names need to be resolved this way, as a server can't communicate without an IP address.
 
-上图在一个非常高的层次给出了HTTP请求的流程。首先用户在浏览器输入URL，浏览器会向DNS服务器发起一个请求以解析域名并得到其ip地址。DNS服务器会查询inlanefreight.com的IP地址并返回。所有的域名都需要通过这种方式解析，因为服务器端在没有IP地址的情况下无法通信。
+上图在一个非常高的层次给出了HTTP请求的流程。首先用户在浏览器输入URL（`inlanefreight.com`），之后浏览器会向DNS服务器发起一个请求以解析域名并得到其ip地址。DNS服务器会查询inlanefreight.com的IP地址并返回。所有的域名都需要通过这种方式来解析，因为服务器端在没有IP地址的情况下无法进行通信。
 
 Note: Our browsers usually first look up records in the local '`/etc/hosts`' file, and if the requested domain does not exist within it, then they would contact other DNS servers. We can use the '`/etc/hosts`' to manually add records to for DNS resolution, by adding the IP followed by the domain name.
 
-注意：我们的浏览器通常会首先查询本地的 /etc/hosts 文件的记录，如果所请求的域名在该文件内不存在，那么浏览器会与DNS服务器进行通信。 我们可以手工地向/etc/hosts文件添加域名解析记录，具体操作只需要在IP后面跟上域名即可。
+注意：我们的浏览器通常会首先查询本地的 /etc/hosts 文件的域名记录，如果所请求的域名在该文件内不存在，那么浏览器才会联系DNS服务器。 我们可以手工地向/etc/hosts文件添加域名解析记录，只需要在IP后面跟上域名即可。
 
 Once the browser gets the IP address linked to the requested domain, it sends a GET request to the default HTTP port (e.g. `80`), asking for the root `/` path. Then, the web server receives the request and processes it. By default, servers are configured to return an index file when a request for `/` is received.
 
-一旦浏览器获得了和请求的域名相关联的IP地址，那么浏览器就会向默认的HTTP端口发起一个GET请求，具体的请求路径是根目录/。然后，web服务器会接收到这个请求并进行相应处理。默认情况下，当接收到一个/请求时，服务器被配置为返回一个默认文件。
+一旦浏览器获得了和请求域名相关联的IP地址，那么浏览器就会向默认的HTTP端口发起一个GET请求，要求获得根目录的资源/。然后，web服务器会接收到这个请求并进行相应处理。默认情况下，当接收到一个访问 / 的请求时，服务器被配置为返回一个默认文件。
 
 In this case, the contents of `index.html` are read and returned by the web server as an HTTP response. The response also contains the status code (e.g. `200 OK`), which indicates that the request was successfully processed. The web browser then renders the `index.html` contents and presents it to the user.
 
-在这种情况下，服务器会读取index.html的内容并将其作为HTTP响应返回。响应包含了状态码（比如200 OK），状态码表明了请求已被成功处理。随后web浏览器会渲染index.html的内容并将其展示给用户。
+在这种情况下，服务器会读取 index.html 的内容并将其作为 HTTP 响应返回。响应包含了状态码（比如200 OK）。状态码表明了请求已被成功处理。随后 web 浏览器会渲染 index.html的内容并将其展示给用户。
 
 Note: This module is mainly focused on HTTP web requests. For more on HTML and web applications, you may refer to the [Introduction to Web Applications](https://academy.hackthebox.com/module/details/75) module.
 
@@ -58,18 +58,16 @@ Note: This module is mainly focused on HTTP web requests. For more on HTML and w
 
 In this module, we will be sending web requests through two of the most important tools for any web penetration tester, a Web Browser, like Chrome or Firefox, and the `cURL` command line tool.
 
-在本模块中，我们将会通过对于渗透测试者来说的两个最重要的工具来发起web请求。这两个工具分别是Web浏览器，比如谷歌或火狐，另一个cURL命令行工具。
+在本模块中，我们将会通过两个重要的工具来发起 web 请求。这两个工具分别是 Web 浏览器，比如谷歌或火狐，另一个则是 cURL 命令行工具。
 
 [cURL](https://curl.haxx.se/) (client URL) is a command-line tool and library that primarily supports HTTP along with many other protocols. This makes it a good candidate for scripts as well as automation, making it essential for sending various types of web requests from the command line, which is necessary for many types of web penetration tests.
 
 cURL（client URL）是一个命令行工具和库，主要支持HTTP及许多其他协议。这使得它成为脚本和自动化的一个很好的候选。\
-这个工具对于从命令行发送不同类型的web请求起到十分重要的作用，这对于许多类型的web渗透测试来说是很必要的。
+这个工具可以从命令行发送不同类型的 web 请求，这对于许多类型的 web 测试来说是很必要的。&#x20;
 
 We can send a basic HTTP request to any URL by using it as an argument for cURL, as follows:
 
-我们可以发起一个到任意URL的基本的HTTP请求，只需将该URL作为cURL的参数即可，具体示例如下：
-
-&#x20;&#x20;
+我们可以发起一个到任意 URL 的 HTTP 请求，只需将该 URL 作为 cURL 的参数即可，具体示例如下：
 
 ```bash
 MirRoR4s@htb[/htb]$ curl inlanefreight.com
@@ -81,11 +79,11 @@ MirRoR4s@htb[/htb]$ curl inlanefreight.com
 
 We see that cURL does not render the HTML/JavaScript/CSS code, unlike a web browser, but prints it in its raw format. However, as penetration testers, we are mainly interested in the request and response context, which usually becomes much faster and more convenient than a web browser.
 
-我们可以看到cURL并不会渲染HTML/JavaScript/CSS 代码，不像一个web浏览器，而是打印出其原始格式。然而，作为渗透测试者，我们主要对请求及响应的上下文感兴趣，所以是否渲染HTML等代码并不重要。这就使得cURL比起web浏览器来说，是一个更加快速和方便的工具。
+我们可以看到不像 web 浏览器，cURL 并不会渲染 HTML/JavaScript/CSS 代码，而是打印出其原始格式。然而，作为渗透测试者，我们主要对请求及响应的上下文感兴趣，所以是否渲染HTML等代码并不重要，所以 cURL 比起 web 浏览器来说，是一个更加快速和方便的工具。
 
 We may also use cURL to download a page or a file and output the content into a file using the `-O` flag. If we want to specify the output file name, we can use the `-o` flag and specify the name. Otherwise, we can use `-O` and cURL will use the remote file name, as follows:
 
-&#x20; 我们也可以使用cURL下载一个页面或文件并使用-O标志将其内容输出到一个文件中。若我们想要指定输出的文件名，我们可以使用-o标志后跟文件名。否则的话，输出的文件名为远程的文件名，具体示例如下：
+&#x20; 我们也可以使用 cURL 下载一个网页或文件并使用 `-O` 标志将其内容输出到一个文件中。若我们想要指定输出的文件名，我们可以使用 `-o` 标志后跟文件名，否则输出的文件名默认为远程的文件名，具体示例如下：
 
 ```bash
 MirRoR4s@htb[/htb]$ curl -O inlanefreight.com/index.html
@@ -95,7 +93,7 @@ index.html
 
 As we can see, the output was not printed this time but rather saved into `index.html`. We noticed that cURL still printed some status while processing the request. We can silent the status with the `-s` flag, as follows:
 
-&#x20; 如我们所见，这一次输出并没有打印出来，而是被保存到了一个名为index.html的文件中。我们注意到cURL在处理请求时仍然会打印出一些状态信息。我们可以使用-s标志隐藏这些状态信息，具体示例如下：
+&#x20; 如我们所见，这一次响应的内容没有被打印出来，而是被保存到了一个名为 index.html 的文件中。我们注意到 cURL 在处理请求时仍然会打印出一些状态信息。我们可以使用 `-s` 标志隐藏这些状态信息，具体示例如下：
 
 ```bash
 MirRoR4s@htb[/htb]$ curl -s -O inlanefreight.com/index.html
@@ -103,7 +101,7 @@ MirRoR4s@htb[/htb]$ curl -s -O inlanefreight.com/index.html
 
 This time, cURL did not print anything, as the output was saved into the `index.html` file. Finally, we may use the `-h` flag to see what other options we may use with cURL:
 
-&#x20; 这一次cURL将不会打印任何信息，因为输出被保存到index.html文件中去了。最后，我们可以使用-h标志查看cURL可以使用的选项。
+&#x20; 这一次cURL将不会打印任何信息，因为输出被保存到index.html文件中去了。最后，我们可以使用 -h 标志查看 cURL 支持的选项。
 
 ```bash
 MirRoR4s@htb[/htb]$ curl -h
@@ -125,7 +123,7 @@ Use the user manual `man curl` or the "--help all" flag for all options.
 
 As the above message mentions, we may use `--help all` to print a more detailed help menu, or `--help category` (e.g. `-h http`) to print the detailed help of a specific flag. If we ever need to read more detailed documentation, we can use `man curl` to view the full cURL manual page.
 
-如上所示，我们也可以使用--help all 来打印出更加具体的帮助菜单，或是使用 --help category（比如 -h http）来打印一个指定标志的具体帮助信息。若我们想要阅读更加具体的文档，我们可以使用 `man curl` 命令查看完整的cURL手册页。
+如上所示，我们也可以使用 `--help all` 来打印出更加具体的帮助菜单，或是使用 `--help category`（比如 -h http）来打印一个指定标志的具体帮助信息。若我们想要阅读更加具体的文档，我们可以使用 `man curl` 命令查看完整的 cURL 手册页。
 
 In the upcoming sections, we will cover most of the above flags and see where we should use each of them.
 
