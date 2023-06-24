@@ -29,5 +29,5 @@
   * [HTTP Fundamentals](web-requests/http-fundamentals/README.md)
     * [HyperText Transfer Protocol (HTTP)](web-requests/http-fundamentals/hypertext-transfer-protocol-http.md)
     * [Hypertext Transfer Protocol Secure (HTTPS)](web-requests/http-fundamentals/hypertext-transfer-protocol-secure-https.md)
-    * [Page 2](web-requests/http-fundamentals/page-2.md)
+    * [HTTP Requests and Responses](web-requests/http-fundamentals/http-requests-and-responses.md)
   * [Page 1](web-requests/page-1.md)
