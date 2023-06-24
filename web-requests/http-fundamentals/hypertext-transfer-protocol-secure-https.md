@@ -22,11 +22,23 @@ If we examine an HTTP request, we can see the effect of not enforcing secure com
 
 We can see that the login credentials can be viewed in clear-text. This would make it easy for someone on the same network (such as a public wireless network) to capture the request and reuse the credentials for malicious purposes.
 
-In contrast, when someone intercepts and analyzes traffic from an HTTPS request, they would see something like the following: ![https\_google\_enc](https://academy.hackthebox.com/storage/modules/35/https\_google\_enc.png)
+我们可以看到，登录凭据以明文的形式展现出来。这使得处于同一网络内（比如公用的无线网络）的任何人都可以轻松地捕获到该请求并出于恶意的目的复用凭据。
+
+In contrast, when someone intercepts and analyzes traffic from an HTTPS request, they would see something like the following:
+
+相反地，当某人截获并分析一个HTTPS请求的流量时，他们会看到如下的信息：
+
+![https\_google\_enc](https://academy.hackthebox.com/storage/modules/35/https\_google\_enc.png)
 
 As we can see, the data is transferred as a single encrypted stream, which makes it very difficult for anyone to capture information such as credentials or any other sensitive data.
 
-Websites that enforce HTTPS can be identified through `https://` in their URL (e.g. https://www.google.com), as well as the lock icon in the address bar of the web browser, to the left of the URL: ![https\_google](https://academy.hackthebox.com/storage/modules/35/https\_google.png)
+如你所见，数据是通过一种加密流的形式传输的，这就使得任何人捕获诸如凭据或其他敏感数据的信息变得非常困难。
+
+Websites that enforce HTTPS can be identified through `https://` in their URL (e.g. https://www.google.com), as well as the lock icon in the address bar of the web browser, to the left of the URL:&#x20;
+
+可以通过URL中的 `https://` 字样鉴别网站是否采用了HTTPS协议，（比如 https://www.google.com）也可以通过位于URL左侧的web浏览器地址栏中的锁图标来鉴别。
+
+![https\_google](https://academy.hackthebox.com/storage/modules/35/https\_google.png)
 
 So, if we visit a website that utilizes HTTPS, like Google, all traffic would be encrypted.
 
@@ -34,11 +46,19 @@ Note: Although the data transferred through the HTTPS protocol may be encrypted,
 
 ***
 
+***
+
 ### HTTPS Flow
 
-Let's look at how HTTPS operates at a high level: ![HTTPS\_Flow](https://academy.hackthebox.com/storage/modules/35/HTTPS\_Flow.png)
+Let's look at how HTTPS operates at a high level:&#x20;
+
+让我们在高层看看HTTPS是如何运作的：
+
+![HTTPS\_Flow](https://academy.hackthebox.com/storage/modules/35/HTTPS\_Flow.png)
 
 If we type `http://` instead of `https://` to visit a website that enforces HTTPS, the browser attempts to resolve the domain and redirects the user to the webserver hosting the target website. A request is sent to port `80` first, which is the unencrypted HTTP protocol. The server detects this and redirects the client to secure HTTPS port `443` instead. This is done via the `301 Moved Permanently` response code, which we will discuss in an upcoming section.
+
+若我们输入 `http://` 而不是 `https://` 来访问一个基于HTTPS的网站，那么浏览器会尝试解析域名并将用户重定向到持有目标网站的web服务器上。请求首先会被发送到80端口，这是未加密的HTTP协议所用的。之后服务器会检测到这一点并将客户端重定向到HTTPS的443端口。上述操作是通过 `301 Moved Permanently 响应状态码实现的，我们在稍后的章节会讨论这一知识。`
 
 Next, the client (web browser) sends a "client hello" packet, giving information about itself. After this, the server replies with "server hello", followed by a [key exchange](https://en.wikipedia.org/wiki/Key\_exchange) to exchange SSL certificates. The client verifies the key/certificate and sends one of its own. After this, an encrypted [handshake](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake) is initiated to confirm whether the encryption and transfer are working correctly.
 
