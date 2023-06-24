@@ -1,16 +1,17 @@
 ---
 description: https://academy.hackthebox.com/module/18/section/2098
+coverY: 0
 ---
 
 # Network Configuration
 
 As a penetration tester, one of the key skills required is configuring and managing network settings on Linux systems. This skill is valuable in setting up testing environments, controlling network traffic, or identifying and exploiting vulnerabilities. By understanding Linux's network configuration options, we can tailor our testing approach to suit our specific needs and optimize our results.
 
-作为一名渗透测试人员，要掌握的一门核心技能就是懂得如何配置和管理Linux系统的网络设置。当在搭建测试环境、控制网络流量或是发现和利用漏洞时，这门技能就可以派上用场。通过理解Linux的网络配置选项，可以调整渗透测试方法以满足特定的需要并对相关结果进行优化。
+作为一名渗透测试人员，要求（掌握）的核心技能之一就是配置和管理Linux系统的网络设置。该技能对于搭建测试环境、控制网络流量或是发现和利用漏洞很有价值。通过理解Linux的网络配置选项，可以调整我们的测试方法以满足我们的特定需求并优化我们的结果。
 
 One of the primary network configuration tasks is configuring network interfaces. This includes assigning IP addresses, configuring network devices such as routers and switches, and setting up network protocols. It is essential to thoroughly understand the network protocols and their specific use cases, such as TCP/IP, DNS, DHCP, and FTP. Additionally, we should be familiar with different network interfaces, including wireless and wired connections, and be able to troubleshoot connectivity issues.
 
-配置网络接口是主要的网络配置任务之一。这项任务包括分配IP地址、配置如路由器和交换器等的网络设备以及建立网络协议。彻底地理解网络协议及其相应的用途是十分重要的，如TCP/IP、DNS、DHCPFTP等协议。此外，应熟悉不同的网络接口，包括无线的和有线的，同时也要能够学会排查网络连接问题。
+配置网络接口是主要的网络配置任务之一。这项任务包括分配IP地址、配置如路由器和交换器等的网络设备以及建立网络协议。彻底地理解网络协议及其相应的用途是十分重要的，如TCP/IP、DNS、DHCP、FTP等协议。此外，应熟悉不同的网络接口，包括无线的和有线的，同时也要能够学会排查网络连接问题。
 
 Network access control is another critical component of network configuration. As a penetration testers, we should be familiar with the importance of NAC for network security and the different NAC technologies available. These include:
 
