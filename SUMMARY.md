@@ -25,3 +25,6 @@
   * [Linux Networking](linux-fundamentals/linux-networking/README.md)
     * [Network Configuration](linux-fundamentals/linux-networking/network-configuration.md)
     * [Remote Desktop Protocols in Linux](linux-fundamentals/linux-networking/remote-desktop-protocols-in-linux.md)
+* [Web Requests](web-requests/README.md)
+  * [Page 1](web-requests/page-1.md)
+  * [HyperText Transfer Protocol (HTTP)](web-requests/hypertext-transfer-protocol-http.md)
