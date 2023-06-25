@@ -40,30 +40,56 @@ This can be very frustrating, and this is a normal part of the learning process.
 
 Another important point is our knowledge level. Many people do not know their actual skill and knowledge level. This is a complicated topic because penetration testers must have a deep understanding of a wide variety of technologies. As previously mentioned, the problem in this field is the sheer volume of information available to us. We can learn about every topic and still not master any one area, or we can learn about just one topic and become an expert in it.
 
+另一个重要的点是我们的知识水平。许多人不知道它们实际的技能和知识水平，这是一个复杂的主题，因为渗透测试者必须对各种技术都有一个较深的理解。如前所述，信息安全领域的问题就是我们需要学习的知识太多了，不过我们可以学习每个主题的基础但并不掌握任何一个领域，或者我们也可以单独学习某个主题并成为该主题的专家。
+
 Another option is developing our research methodology, the learning process, and how to use this to improve our knowledge. We will be successful if we know how to search for the required information on the internet, and we know how to learn fast and adapt it to the environment we are working in. However, before we can do this, we have to learn and practice how to do it.
+
+另一个选择是培养我们的研究方法、学习过程以及如何利用这些来提升我们的知识。若我们知道如何在互联网上搜索所需的信息，那么我们就可以知道如何快速地学习并适应我们的工作环境。然而，在我们这样做之前，我们必须学习并实操如何做。
 
 We will become a good penetration tester only through considerable practice. There is no other way to improve our practical skills. For example, we can read 50 books about programming, and we will understand how to read the code. This is the process of passive learning. This can be useful. However, if we need to write our own program, we have to practice active learning, which means we have to write code and test it on our own.
 
+只有经过了大量的练习，我们才可以成为一个好的渗透测试者，除此之外，没有别的方法可以提升我们的实操技能。举个例子，我们可以阅读 50 本有关编程的书籍来理解如何阅读代码，然而这是被动的学习过程。尽管该过程是有效的，但是，如果我们需要编写我们自己的程序，那么我们必须养成主动学习的习惯，这意味着我们必须自己编写代码并调试它们。
+
 One of the most common questions is:
+
+最常见的一个问题是：
 
 When is a penetration tester good enough?
 
+何时一个渗透测试者才足够好？
+
 We know that one person cannot know everything. In this case, we have to learn how to `find`, `choose`, and `adapt` the information we need.
+
+我们知道一个人不可以知晓所有知识，在这种情况下，我们必须学习如何寻找、选择以及调整我们所需的信息。
 
 Right now, we are considering these three key terms. There is one key term missing.
 
+现在让我们思考以下上述的三个关键术语，不过我们还遗漏了一个关键术语。
+
 Which key term is missing from the above list?
+
+上述列表遗漏了哪个关键术语呢？
 
 The crucial missing term is: **`LEARN`**
 
+遗漏的重要关键术语是学习
+
 The process of "learning how to `learn`" is not easy. Most people have never truly learned how to learn effectively. For example, in school, our teachers discussed some topics with our class. First, teachers show us just one way to solve a problem. They explained one way to solve the problem, and after that, they gave us exercises to practice further.
 
+学习如何“学习”的过程并不容易。大部分人从未真正学习过如何高效学习。举个例子，在学校中，老师会在班级上和我们讨论一些主题。首先，老师会向我们展示解决问题的一个方法，他们会详细阐述该方法，之后他们会布置一些作业以便我们进一步练习。
+
 Let us take a closer look at the problem. Look at this simple math equation and try to solve it:
+
+让我们进一步观察一下这个问题。观察下面这个简单的等式并尝试求解它：
 
 20 \* \_\_\_\_\_\_\_\_+ \_\_\_\_\_\_\_\_ = 65535
 
 This equation is easy to solve, but did we think about how many different ways are there to solve it?
 
+这个等式很容易求解，但是请问有多少种求解该等式的方法呢？
+
 **Optional Exercise:**
 
 Ask yourself why you didn't solve the problem in a different way. Write it down and try to think about the reasons for choosing the method that you chose. Take as much time as you need for it before you continue.
+
+问问你自己，为什么不采用另一种方法来求解该问题。思考你为什么选择某种方法来求解该问题，并在纸上写下来。在你继续本模块的学习之前，尽可能花时间思考一下这个问题。

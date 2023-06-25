@@ -2,7 +2,9 @@
 
 * [前言](README.md)
 * [LEARNING PROCESS](learning-process/README.md)
-  * [Way of Thinking](learning-process/way-of-thinking.md)
+  * [Mindset](learning-process/mindset/README.md)
+    * [Way of Thinking](learning-process/mindset/way-of-thinking.md)
+* [Page 2](page-2.md)
 * [Introduction to Academy](introduction-to-academy/README.md)
   * [Interactive Section with Target](introduction-to-academy/interactive-section-with-target.md)
   * [Modules](introduction-to-academy/modules.md)
