@@ -4,6 +4,8 @@
 * [LEARNING PROCESS](learning-process/README.md)
   * [Mindset](learning-process/mindset/README.md)
     * [Way of Thinking](learning-process/mindset/way-of-thinking.md)
+    * [Think Outside the Box](learning-process/mindset/think-outside-the-box.md)
+    * [Occam's Razor](learning-process/mindset/occams-razor.md)
 * [Page 2](page-2.md)
 * [Introduction to Academy](introduction-to-academy/README.md)
   * [Interactive Section with Target](introduction-to-academy/interactive-section-with-target.md)
