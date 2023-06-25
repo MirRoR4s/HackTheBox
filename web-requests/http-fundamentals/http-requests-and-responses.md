@@ -6,6 +6,8 @@ description: https://academy.hackthebox.com/module/35/section/220
 
 HTTP communications mainly consist of an HTTP request and an HTTP response. An HTTP request is made by the client (e.g. cURL/browser), and is processed by the server (e.g. web server). The requests contain all of the details we require from the server, including the resource (e.g. URL, path, parameters), any request data, headers or options we specify, and many other options we will discuss throughout this module.
 
+HTTP通信主要由HTTP请求和HTTP响应组成。HTTP请求由客户端发出（例如 cURL/浏览器），并由服务器端进行处理。请求包含了我们期望从服务端获得的所有详细信息。包括资源（比如 URL，路径、参数），任意的请求数据，我们指定的首部或选项以及许多我们稍后会在该模块讨论的其他可选项。
+
 Once the server receives the HTTP request, it processes it and responds by sending the HTTP response, which contains the response code, as discussed in a later section, and may contain the resource data if the requester has access to it.
 
 ***
