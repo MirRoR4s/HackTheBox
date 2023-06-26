@@ -6,7 +6,7 @@ description: https://academy.hackthebox.com/module/34/section/298
 
 Each network is structured differently and can be set up individually. For this reason, so-called `types` and `topologies` have been developed that can be used to categorize these networks. When reading about all the types of networks, it can be a bit of information overload as some network types include the geographical range. We rarely hear some of the terminologies in practice, so this section will be broken up into `Common Terms` and `Book Terms`. Book terms are good to know, as there has been a single documented case of an email server failing to deliver emails longer than 500 miles but don't be expected to be able to recite them on demand unless you are studying for a networking exam.
 
-每个网络都有不同的结构，可以分别地建立这些网络。因此，人们提出了`类型`和`拓扑`来分类不同结构的网络。当尝试理解网络的所有类型时，我们可能会感到有点混乱，这是因为某些网络类型还包括了地理范围。我们在实践中很少听到一些术语，因此本节将分为通用术语和书籍术语。
+有很多具有不同结构的网络，所以人们提出了`类型`和拓扑来对不同结构的网络进行分类。当尝试理解各种类型的网络时，我们可能会感到有点混乱，这是因为一些类型的网络还包括了地理范围。在实际中我们很少听到某些术语，所以本节将术语分成常用术语和书籍术语。
 
 **Common Terminology**
 
@@ -23,7 +23,7 @@ Each network is structured differently and can be set up individually. For this 
 
 The WAN (Wide Area Network) is commonly referred to as `The Internet`. When dealing with networking equipment, we'll often have a WAN Address and LAN Address. The WAN one is the address that is generally accessed by the Internet. That being said, it is not inclusive to the Internet; a WAN is just a large number of LANs joined together. Many large companies or government agencies will have an "Internal WAN" (also called Intranet, Airgap Network, etc.). Generally speaking, the primary way we identify if the network is a WAN is to use a WAN Specific routing protocol such as BGP and if the IP Schema in use is not within RFC 1918 (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).
 
-广域网（Wide Area Network）通常也被称为**互联网**。网络设备通常会有一个 WAN 地址和一个 LAN 地址。WAN 一般是可通过互联网访问的地址，但是其实际上并不包含在互联网中，WAN 仅是大量的LANs连接起来构成的网络。许多大公司或政府机构都有一个内部的WAN（也被称为内联网，Airgap 网络等）。通常来说，判断某个网络是否是一个WAN的首要方法是利用特定的WAN路由协议，比如BGP。也可以通过查看使用的IP架构是否不在 RFC 1918内(10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16)来判断，如果不在那就是WAN。
+广域网（Wide Area Network）通常也被称为**互联网**。当处理网络设备时，我们通常会有一个 WAN 地址以及一个 LAN 地址。WAN 一般是可通过互联网访问的地址，但其实际上并不包含在互联网中，WAN 仅是由大量的 LANs 连接而成的网络。许多大公司或政府机构都有一个内部的 WAN（也被称为内联网，Airgap 网络等）。通常来说，判断某个网络是否为 WAN 的首要方法是利用特定的 WAN 路由协议，比如 BGP 。也可以通过查看使用的 IP 架构是否不在 RFC 1918 内 (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) 来判断，如果不在那就是 WAN。
 
 ### LAN / WLAN
 

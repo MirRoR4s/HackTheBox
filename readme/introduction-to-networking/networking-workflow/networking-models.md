@@ -44,12 +44,16 @@ TCP/IP 是一种允许主机连接到 Internet 的通信协议。它指的是互
 
 In a layered system, devices in a layer exchange data in a different format called a `protocol data unit` (`PDU`). For example, when we want to browse a website on the computer, the remote server software first passes the requested data to the application layer. It is processed layer by layer, each layer performing its assigned functions. The data is then transferred through the network's physical layer until the destination server or another device receives it. The data is routed through the layers again, with each layer performing its assigned operations until the receiving software uses the data.
 
-在分层系统中，层中的设备使用一种不同的格式交换数据，这种不同的格式称为协议数据单元 PDU。例如，当我们要在计算机上浏览网站时，远程服务器软件首先将请求的数据传递给应用层。它被逐层处理，每一层执行其指定的功能。然后，数据通过网络的物理层传输，直到目标服务器或另一个设备接收到它。数据再次通过各层路由，每一层执行其分配的操作，直到接收软件使用该数据。
+在分层系统中，层中的设备以一种称为协议数据单元（PDU）的不同格式交换数据。例如，当我们要在计算机上浏览网站时，远程服务器软件首先将请求的数据传递给应用层。数据被逐层地处理，每一层执行其指定的功能。然后，通过物理层传输数据，直到目标服务器或某个设备接收到它。之后数据再次通过接收端的各层路由，每一层执行其分配的操作，直到接收软件（应用层）使用该数据。
 
 ![image](https://academy.hackthebox.com/storage/modules/34/redesigned/net\_models\_pdu2.png)
 
 During the transmission, each layer adds a `header` to the `PDU` from the upper layer, which controls and identifies the packet. This process is called `encapsulation`. The header and the data together form the PDU for the next layer. The process continues to the `Physical Layer` or `Network Layer`, where the data is transmitted to the receiver. The receiver reverses the process and unpacks the data on each layer with the header information. After that, the application finally uses the data. This process continues until all data has been sent and received.
 
+在传输过程中，每一层都会在来自上层的 PDU 中添加一个报头，用于控制和识别数据包。这个过程称为封装。标头和数据一起构成下一层的 PDU。该过程持续到物理层或网络层，数据在此处传输到接收方。然后接收方逆转上述过程并使用报头信息解包每一层上的数据。最后应用层就可以使用解包完毕后的数据了。此过程将持续进行，直到所有数据均已发送和接收。
+
 ![image](https://academy.hackthebox.com/storage/modules/34/packet\_transfer.png)
 
 For us, as penetration testers, both reference models are useful. With `TCP/IP`, we can quickly understand how the entire connection is established, and with `ISO`, we can take it apart piece by piece and analyze it in detail. This often happens when we can listen to and intercept specific network traffic. We then have to analyze this traffic accordingly, going into more detail in the `Network Traffic Analysis` module. Therefore, we should familiarize ourselves with both reference models and understand and internalize them in the best possible way.
+
+作为渗透测试人员，这两个参考模型都很有用。使用 TCP/IP，可以快速了解整个连接是如何建立的，而使用 ISO 模型，可以拆开连接过程并进行详细的分析。通常在可以侦听和拦截特定的网络流量时，会发生这种情况。然后，我们必须相应地分析该流量，在网络流量分析模块中进行更详细的分析。因此，我们应该熟悉这两个参考模型，并以尽可能最好的方式理解和内化它们。

@@ -41,6 +41,8 @@
       * [Proxies-代理](readme/introduction-to-networking/networking-structure/proxies-dai-li.md)
     * [Networking Workflow](readme/introduction-to-networking/networking-workflow/README.md)
       * [Networking Models](readme/introduction-to-networking/networking-workflow/networking-models.md)
+      * [The OSI Model](readme/introduction-to-networking/networking-workflow/the-osi-model.md)
+      * [The TCP/IP Model](readme/introduction-to-networking/networking-workflow/the-tcp-ip-model.md)
   * [Web Requests](readme/web-requests/README.md)
     * [HTTP Fundamentals](readme/web-requests/http-fundamentals/README.md)
       * [HyperText Transfer Protocol (HTTP)](readme/web-requests/http-fundamentals/hypertext-transfer-protocol-http.md)
