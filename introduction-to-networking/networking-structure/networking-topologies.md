@@ -8,7 +8,7 @@ description: https://academy.hackthebox.com/module/34/section/299
 
 A `network topology` is a typical arrangement and `physical` or `logical` connection of devices in a network.&#x20;
 
-网络拓扑是一个典型的排列，是网络中物理的或逻辑的设备间的连接。
+网络拓扑是一个典型的排列，是网络中设备间物理的或逻辑上的连接。
 
 Computers are `hosts`, such as `clients` and `servers`, that actively use the network.
 
@@ -51,10 +51,7 @@ We can divide the entire network topology area into three areas:
 
 **2. Nodes - Network Interface Controller (NICs)-节点-网卡**
 
-|              |          |           |          |
-| ------------ | -------- | --------- | -------- |
-| Repeaters    | Hubs     | Bridges   | Switches |
-| Router/Modem | Gateways | Firewalls |          |
+<table><thead><tr><th width="173"></th><th width="140"></th><th width="74"></th><th></th></tr></thead><tbody><tr><td>Repeaters</td><td>Hubs</td><td>Bridges</td><td>Switches</td></tr><tr><td>Router/Modem</td><td>Gateways</td><td>Firewalls</td><td></td></tr></tbody></table>
 
 Network nodes are the `transmission medium's connection points` to transmitters and receivers of electrical, optical, or radio signals in the medium.&#x20;
 
@@ -99,52 +96,120 @@ More complex networks can be built as hybrids of two or more of the basic topolo
 
 ***
 
-### Point-to-Point
+### Point-to-Point-点对点
 
-The simplest network topology with a dedicated connection between two hosts is the `point-to-point` topology. In this topology, a direct and straightforward physical link exists only between `two hosts`. These two devices can use these connections for mutual communication.
+The simplest network topology with a dedicated connection between two hosts is the `point-to-point` topology.&#x20;
+
+两台主机之间具有专用连接的最简单的网络拓扑就是点对点拓扑。
+
+In this topology, a direct and straightforward physical link exists only between `two hosts`.&#x20;
+
+在点对点拓扑中，两台主机之间仅存在一条直连的物理链路。
+
+These two devices can use these connections for mutual communication.
+
+这两台主机可以利用这条链路互相通信。
 
 `Point-to-point` topologies are the basic model of traditional telephony and must not be confused with `P2P` (`Peer-to-Peer` architecture).
 
-**Point-To-Point Topology**
+点对点拓扑是传统电话的基本模型，一定不要和 P2P 混淆了。
+
+**Point-To-Point Topology-点对点拓扑图示**
 
 ![image](https://academy.hackthebox.com/storage/modules/34/redesigned/topo\_p2p.png)
 
 ***
 
-### Bus
+### Bus-总线型
 
-All hosts are connected via a transmission medium in the bus topology. Every host has access to the transmission medium and the signals that are transmitted over it. There is no central network component that controls the processes on it. The transmission medium for this can be, for example, a `coaxial cable`.
+All hosts are connected via a transmission medium in the bus topology.&#x20;
 
-Since the medium is shared with all the others, only `one host can send`, and all the others can only receive and evaluate the data and see whether it is intended for itself.
+在总线型拓扑中，所有的主机都是通过一种传输介质相连起来的。
 
-**Bus Topology**
+Every host has access to the transmission medium and the signals that are transmitted over it.&#x20;
+
+每台主机都可以访问该传输介质并在其上传输信号。
+
+There is no central network component that controls the processes on it.&#x20;
+
+注意到不存在一个有控制力的网络部件来控制上述过程。
+
+The transmission medium for this can be, for example, a `coaxial cable`.
+
+举个例子，传输介质可以是同轴电缆。
+
+Since the medium is shared with all the others, only `one host can send`, and all the others can only receive and **evaluate** the data and see whether it is intended for itself.
+
+因为传输介质由所有主机共享，所以所有主机都可以接收数据并衡量数据是否是发给自己的，注意同一时刻只有一台主机能够发送数据。
+
+**Bus Topology-总线型拓扑图示**
 
 ![image](https://academy.hackthebox.com/storage/modules/34/redesigned/topo\_bus.png)
 
-***
-
 ### Star
 
-The star topology is a network component that maintains a connection to all hosts. Each host is connected to the `central network component` via a separate link. This is usually a router, a hub, or a switch. These handle the `forwarding function` for the data packets. To do this, the data packets are received and forwarded to the destination. The data traffic on the central network component can be very high since all data and connections go through it.
+The star topology is a network component that maintains a connection to all hosts.&#x20;
+
+星型拓扑指的是某个网络部件维护了一个到所有主机的连接。
+
+Each host is connected to the `central network component` via a separate link.&#x20;
+
+每台主机都通过一个单独的链路连接到中心的网络组件。
+
+This is usually a router, a hub, or a switch. These handle the `forwarding function` for the data packets.&#x20;
+
+中心网络组件通常是路由器、集线器或者是交换机，它们负责处理数据包的转发功能。
+
+To do this, the data packets are received and forwarded to the destination.&#x20;
+
+为了实现数据包的转发，这些中心网络组件会接收数据包并将其转发到目的地。
+
+The data traffic on the central network component can be very high since all data and connections go through it.
+
+在中心网络组件的数据流量可能会非常大，因为所有的数据和连接都要经过此处。
 
 **Star Topology**
 
 ![image](https://academy.hackthebox.com/storage/modules/34/redesigned/topo\_star.png)
 
-***
-
 ### Ring
 
 The `physical` ring topology is such that each host or node is connected to the ring with two cables:
 
-* One for the `incoming` signals and
-* the another for the `outgoing` ones.
+物理上的环形拓扑指的是每台主机或节点利用两条电缆相连成环。
 
-This means that one cable arrives at each host and one cable leaves. The ring topology typically does not require an active network component. The control and access to the transmission medium are regulated by a protocol to which all stations adhere.
+* One for the `incoming` signals and
+* 一条用于接收到来的信号。
+* the another for the `outgoing` ones.
+* 另一条用于信号的传出。
+
+This means that one cable arrives at each host and one cable leaves.&#x20;
+
+这意味着一条电缆到达每个主机，另一条电缆离开。
+
+The ring topology typically does not require an active network component.&#x20;
+
+环形拓扑通常并不要求一个主动的网络组件。
+
+The control and access to the transmission medium are regulated by a protocol to which all stations adhere.
+
+对传输介质的控制和访问由所有站都遵守的协议进行管理。
 
 A `logical` ring topology is based on a physical star topology, where a distributor at the node simulates the ring by forwarding from one port to the next.
 
-The information is transmitted in a predetermined transmission direction. Typically, the transmission medium is accessed sequentially from station to station using a retrieval system from the central station or a `token`. A token is a bit pattern that continually passes through a ring network in one direction, which works according to the `claim token process`.
+逻辑上的环形拓扑是基于物理上的星型拓扑，节点上的分发器通过从一个端口转发到下一个端口来模拟环。
+
+The information is transmitted in a predetermined transmission direction.&#x20;
+
+信息是在一个预先确定的方向上传输的。
+
+Typically, the transmission medium is accessed sequentially from station to station using a retrieval system from the central station or a `token`.&#x20;
+
+通常，使用来自中心站的检索系统或令牌从一个站到另一个站顺序地访问传输介质。
+
+A token is a bit pattern that continually passes through a ring network in one direction, which works according to the `claim token process`.
+
+令牌是一种位模式，在一个方向上不断地通过环形网络，其根据声明令牌过程进行工作。
 
 **Ring Topology**
 
