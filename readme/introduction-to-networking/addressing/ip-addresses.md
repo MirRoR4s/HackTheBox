@@ -44,7 +44,7 @@ A further separation of these classes into small networks is done with the help 
 
 ### Network and Gateway Addresses
 
-The `two` additional `IPs` added in the `IPs column` are reserved for the so-called `network address` and the `broadcast address`. Another important role plays the `default gateway`, which is the name for the IPv4 address of the `router` that couples networks and systems with different protocols and manages addresses and transmission methods. It is common for the `default gateway` to be assigned the first or last assignable IPv4 address in a subnet. This is not a technical requirement, but has become a de-facto standard in network environments of all sizes.
+The `two` additional `IPs` added in the `IPs column` are reserved for the so-called `network address` and the `broadcast address`. Another important role plays the `default gateway`, which is the name for the IPv4 address of the `router` that **couples（连接）** networks and systems with different protocols and manages addresses and transmission methods. It is common for the `default gateway` to be assigned the first or last assignable IPv4 address in a subnet. This is not a technical requirement, but has become a **de-facto（**事实上**）** standard in network environments of all sizes.
 
 <table data-header-hidden><thead><tr><th width="82"></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Class</strong></td><td><strong>Network Address</strong></td><td><strong><code>First Address</code></strong></td><td><strong>Last Address</strong></td><td><strong>Subnetmask</strong></td><td><strong>CIDR</strong></td><td><strong>Subnets</strong></td><td><strong><code>IPs</code></strong></td></tr><tr><td>A</td><td>1.0.0.0</td><td><code>1.0.0.1</code></td><td>127.255.255.255</td><td>255.0.0.0</td><td>/8</td><td>127</td><td>16,777,214 <code>+ 2</code></td></tr><tr><td>B</td><td>128.0.0.0</td><td><code>128.0.0.1</code></td><td>191.255.255.255</td><td>255.255.0.0</td><td>/16</td><td>16,384</td><td>65,534 <code>+ 2</code></td></tr><tr><td>C</td><td>192.0.0.0</td><td><code>192.0.0.1</code></td><td>223.255.255.255</td><td>255.255.255.0</td><td>/24</td><td>2,097,152</td><td>254 <code>+ 2</code></td></tr><tr><td>D</td><td>224.0.0.0</td><td><code>224.0.0.1</code></td><td>239.255.255.255</td><td>Multicast</td><td>Multicast</td><td>Multicast</td><td>Multicast</td></tr><tr><td>E</td><td>240.0.0.0</td><td><code>240.0.0.1</code></td><td>255.255.255.255</td><td>reserved</td><td>reserved</td><td>reserved</td><td>reserved</td></tr></tbody></table>
 
@@ -54,15 +54,7 @@ The `two` additional `IPs` added in the `IPs column` are reserved for the so-cal
 
 The `broadcast` IP address's task is to connect all devices in a network with each other. `Broadcast` in a network is a message that is transmitted to all participants of a network and does not require any response. In this way, a host sends a data packet to all other participants of the network simultaneously and, in doing so, communicates its `IP address`, which the receivers can use to contact it. This is the `last IPv4` address that is used for the `broadcast`.
 
-| **Class** | **Network Address** | **First Address** | **`Last Address`** | **Subnetmask** | **CIDR**  | **Subnets** | **IPs**        |
-| --------- | ------------------- | ----------------- | ------------------ | -------------- | --------- | ----------- | -------------- |
-| A         | 1.0.0.0             | 1.0.0.1           | `127.255.255.255`  | 255.0.0.0      | /8        | 127         | 16,777,214 + 2 |
-| B         | 128.0.0.0           | 128.0.0.1         | `191.255.255.255`  | 255.255.0.0    | /16       | 16,384      | 65,534 + 2     |
-| C         | 192.0.0.0           | 192.0.0.1         | `223.255.255.255`  | 255.255.255.0  | /24       | 2,097,152   | 254 + 2        |
-| D         | 224.0.0.0           | 224.0.0.1         | `239.255.255.255`  | Multicast      | Multicast | Multicast   | Multicast      |
-| E         | 240.0.0.0           | 240.0.0.1         | `255.255.255.255`  | reserved       | reserved  | reserved    | reserved       |
-
-***
+<table data-header-hidden><thead><tr><th width="102"></th><th></th><th width="97"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Class</strong></td><td><strong>Network Address</strong></td><td><strong>First Address</strong></td><td><strong><code>Last Address</code></strong></td><td><strong>Subnetmask</strong></td><td><strong>CIDR</strong></td><td><strong>Subnets</strong></td><td><strong>IPs</strong></td></tr><tr><td>A</td><td>1.0.0.0</td><td>1.0.0.1</td><td><code>127.255.255.255</code></td><td>255.0.0.0</td><td>/8</td><td>127</td><td>16,777,214 + 2</td></tr><tr><td>B</td><td>128.0.0.0</td><td>128.0.0.1</td><td><code>191.255.255.255</code></td><td>255.255.0.0</td><td>/16</td><td>16,384</td><td>65,534 + 2</td></tr><tr><td>C</td><td>192.0.0.0</td><td>192.0.0.1</td><td><code>223.255.255.255</code></td><td>255.255.255.0</td><td>/24</td><td>2,097,152</td><td>254 + 2</td></tr><tr><td>D</td><td>224.0.0.0</td><td>224.0.0.1</td><td><code>239.255.255.255</code></td><td>Multicast</td><td>Multicast</td><td>Multicast</td><td>Multicast</td></tr><tr><td>E</td><td>240.0.0.0</td><td>240.0.0.1</td><td><code>255.255.255.255</code></td><td>reserved</td><td>reserved</td><td>reserved</td><td>reserved</td></tr></tbody></table>
 
 ### Binary system
 
@@ -76,9 +68,7 @@ Here is an example of how the `first octet` looks like:
 
 **1st Octet - Value: 192**
 
-&#x20; 1st Octet - Value: 192
-
-```shell-session
+```
 Values:         128  64  32  16  8  4  2  1
 Binary:           1   1   0   0  0  0  0  0
 ```
@@ -96,8 +86,6 @@ The entire representation from binary to decimal would look like this:
 
 **IPv4 - Binary Notation**
 
-&#x20; IPv4 - Binary Notation
-
 ```shell-session
 Octet:             1st         2nd         3rd         4th
 Binary:         1100 0000 . 1010 1000 . 0000 1010 . 0010 0111
@@ -110,25 +98,16 @@ This addition takes place for each octet, which results in a decimal representat
 
 **IPv4 - Decimal to Binary**
 
-&#x20; IPv4 - Decimal to Binary
-
-```shell-session
+```
 Values:         128  64  32  16  8  4  2  1
 Binary:           1   1   1   1  1  1  1  1
 ```
 
-| **Octet** | **Values**                         | **Sum** |
-| --------- | ---------------------------------- | ------- |
-| 1st       | 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 | = `255` |
-| 2nd       | 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 | = `255` |
-| 3rd       | 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 | = `255` |
-| 4th       | 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0      | = `0`   |
+<table data-header-hidden><thead><tr><th width="140.33333333333331"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Octet</strong></td><td><strong>Values</strong></td><td><strong>Sum</strong></td></tr><tr><td>1st</td><td>128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</td><td>= <code>255</code></td></tr><tr><td>2nd</td><td>128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</td><td>= <code>255</code></td></tr><tr><td>3rd</td><td>128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</td><td>= <code>255</code></td></tr><tr><td>4th</td><td>0 + 0 + 0 + 0 + 0 + 0 + 0 + 0</td><td>= <code>0</code></td></tr></tbody></table>
 
 **Subnet Mask**
 
-&#x20; Subnet Mask
-
-```shell-session
+```
 Octet:             1st         2nd         3rd         4th
 Binary:         1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
 Decimal:           255    .    255    .    255    .     0
@@ -137,13 +116,11 @@ Decimal:           255    .    255    .    255    .     0
 * IPv4 Address: `192.168.10.39`
 * Subnet mask: `255.255.255.0`
 
-***
-
 ### CIDR
 
-`Classless Inter-Domain Routing` (`CIDR`) is a method of representation and replaces the fixed assignment between IPv4 address and network classes (A, B, C, D, E). The division is based on the subnet mask or the so-called `CIDR suffix`, which allows the bitwise division of the IPv4 address space and thus into `subnets` of any size. The `CIDR suffix` indicates how many bits from the beginning of the IPv4 address belong to the network. It is a notation that represents the `subnet mask` by specifying the number of `1`-bits in the subnet mask.
+`Classless Inter-Domain Routing` (`CIDR`) is a method of representation and replaces the fixed assignment between IPv4 address and network classes (A, B, C, D, E). The division is based on the subnet mask or the so-called `CIDR`` `**`suffix（后缀）`**, which allows the bitwise division of the IPv4 address space and thus into `subnets` of any size. The `CIDR suffix` indicates how many bits from the beginning of the IPv4 address belong to the network. It is a notation that represents the `subnet mask` by specifying the number of `1`-bits in the subnet mask.
 
-Let us stick to the following IPv4 address and subnet mask as an example:
+Let us **stick to（继续做某事）** the following IPv4 address and subnet mask as an example:
 
 * IPv4 Address: `192.168.10.39`
 * Subnet mask: `255.255.255.0`
@@ -156,7 +133,7 @@ The CIDR suffix is, therefore, the sum of all ones in the subnet mask.
 
 &#x20; Subnet Mask
 
-```shell-session
+```
 Octet:             1st         2nd         3rd         4th
 Binary:         1111 1111 . 1111 1111 . 1111 1111 . 0000 0000 (/24)
 Decimal:           255    .    255    .    255    .     0
