@@ -46,13 +46,7 @@ A further separation of these classes into small networks is done with the help 
 
 The `two` additional `IPs` added in the `IPs column` are reserved for the so-called `network address` and the `broadcast address`. Another important role plays the `default gateway`, which is the name for the IPv4 address of the `router` that couples networks and systems with different protocols and manages addresses and transmission methods. It is common for the `default gateway` to be assigned the first or last assignable IPv4 address in a subnet. This is not a technical requirement, but has become a de-facto standard in network environments of all sizes.
 
-| **Class** | **Network Address** | **`First Address`** | **Last Address** | **Subnetmask** | **CIDR**  | **Subnets** | **`IPs`**        |
-| --------- | ------------------- | ------------------- | ---------------- | -------------- | --------- | ----------- | ---------------- |
-| A         | 1.0.0.0             | `1.0.0.1`           | 127.255.255.255  | 255.0.0.0      | /8        | 127         | 16,777,214 `+ 2` |
-| B         | 128.0.0.0           | `128.0.0.1`         | 191.255.255.255  | 255.255.0.0    | /16       | 16,384      | 65,534 `+ 2`     |
-| C         | 192.0.0.0           | `192.0.0.1`         | 223.255.255.255  | 255.255.255.0  | /24       | 2,097,152   | 254 `+ 2`        |
-| D         | 224.0.0.0           | `224.0.0.1`         | 239.255.255.255  | Multicast      | Multicast | Multicast   | Multicast        |
-| E         | 240.0.0.0           | `240.0.0.1`         | 255.255.255.255  | reserved       | reserved  | reserved    | reserved         |
+<table data-header-hidden><thead><tr><th width="82"></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Class</strong></td><td><strong>Network Address</strong></td><td><strong><code>First Address</code></strong></td><td><strong>Last Address</strong></td><td><strong>Subnetmask</strong></td><td><strong>CIDR</strong></td><td><strong>Subnets</strong></td><td><strong><code>IPs</code></strong></td></tr><tr><td>A</td><td>1.0.0.0</td><td><code>1.0.0.1</code></td><td>127.255.255.255</td><td>255.0.0.0</td><td>/8</td><td>127</td><td>16,777,214 <code>+ 2</code></td></tr><tr><td>B</td><td>128.0.0.0</td><td><code>128.0.0.1</code></td><td>191.255.255.255</td><td>255.255.0.0</td><td>/16</td><td>16,384</td><td>65,534 <code>+ 2</code></td></tr><tr><td>C</td><td>192.0.0.0</td><td><code>192.0.0.1</code></td><td>223.255.255.255</td><td>255.255.255.0</td><td>/24</td><td>2,097,152</td><td>254 <code>+ 2</code></td></tr><tr><td>D</td><td>224.0.0.0</td><td><code>224.0.0.1</code></td><td>239.255.255.255</td><td>Multicast</td><td>Multicast</td><td>Multicast</td><td>Multicast</td></tr><tr><td>E</td><td>240.0.0.0</td><td><code>240.0.0.1</code></td><td>255.255.255.255</td><td>reserved</td><td>reserved</td><td>reserved</td><td>reserved</td></tr></tbody></table>
 
 ***
 
