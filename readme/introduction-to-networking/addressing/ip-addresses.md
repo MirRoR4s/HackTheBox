@@ -8,7 +8,7 @@ Each host in the network located can be identified by the so-called `Media Acces
 
 It does not matter whether it is a smaller network, such as a home computer network, or the entire Internet. The IP address ensures the delivery of data to the correct receiver. We can imagine the representation of `MAC` and `IPv4` / `IPv6` addresses as follows:
 
-* `IPv4` / `IPv6` - describes the unique postal address and district of the receiver's building.
+* `IPv4` / `IPv6` - describes the unique postal address and **district（地区）** of the receiver's building.
 * `MAC` - describes the exact floor and apartment of the receiver.
 
 It is possible for a single IP address to address multiple receivers (broadcasting) or for a device to respond to multiple IP addresses. However, it must be ensured that each IP address is assigned only once within the network.
@@ -32,13 +32,7 @@ The `IPv4` format allows 4,294,967,296 unique addresses. The IP address is divid
 
 In the past, further classification took place here. The IP network blocks were divided into `classes A - E`. The different classes differed in the host and network shares' respective lengths.
 
-| **`Class`** | **Network Address** | **First Address** | **Last Address** | **Subnetmask** | **CIDR**  | **Subnets** | **IPs**        |
-| ----------- | ------------------- | ----------------- | ---------------- | -------------- | --------- | ----------- | -------------- |
-| `A`         | 1.0.0.0             | 1.0.0.1           | 127.255.255.255  | 255.0.0.0      | /8        | 127         | 16,777,214 + 2 |
-| `B`         | 128.0.0.0           | 128.0.0.1         | 191.255.255.255  | 255.255.0.0    | /16       | 16,384      | 65,534 + 2     |
-| `C`         | 192.0.0.0           | 192.0.0.1         | 223.255.255.255  | 255.255.255.0  | /24       | 2,097,152   | 254 + 2        |
-| `D`         | 224.0.0.0           | 224.0.0.1         | 239.255.255.255  | Multicast      | Multicast | Multicast   | Multicast      |
-| `E`         | 240.0.0.0           | 240.0.0.1         | 255.255.255.255  | reserved       | reserved  | reserved    | reserved       |
+<table data-header-hidden><thead><tr><th width="94"></th><th></th><th></th><th></th><th></th><th width="135"></th><th></th><th></th></tr></thead><tbody><tr><td><strong><code>Class</code></strong></td><td><strong>Network Address</strong></td><td><strong>First Address</strong></td><td><strong>Last Address</strong></td><td><strong>Subnetmask</strong></td><td><strong>CIDR</strong></td><td><strong>Subnets</strong></td><td><strong>IPs</strong></td></tr><tr><td><code>A</code></td><td>1.0.0.0</td><td>1.0.0.1</td><td>127.255.255.255</td><td>255.0.0.0</td><td>/8</td><td>127</td><td>16,777,214 + 2</td></tr><tr><td><code>B</code></td><td>128.0.0.0</td><td>128.0.0.1</td><td>191.255.255.255</td><td>255.255.0.0</td><td>/16</td><td>16,384</td><td>65,534 + 2</td></tr><tr><td><code>C</code></td><td>192.0.0.0</td><td>192.0.0.1</td><td>223.255.255.255</td><td>255.255.255.0</td><td>/24</td><td>2,097,152</td><td>254 + 2</td></tr><tr><td><code>D</code></td><td>224.0.0.0</td><td>224.0.0.1</td><td>239.255.255.255</td><td>Multicast</td><td>Multicast</td><td>Multicast</td><td>Multicast</td></tr><tr><td><code>E</code></td><td>240.0.0.0</td><td>240.0.0.1</td><td>255.255.255.255</td><td>reserved</td><td>reserved</td><td>reserved</td><td>reserved</td></tr></tbody></table>
 
 ***
 
@@ -46,15 +40,7 @@ In the past, further classification took place here. The IP network blocks were 
 
 A further separation of these classes into small networks is done with the help of `subnetting`. This separation is done using the `netmasks`, which is as long as an IPv4 address. As with classes, it describes which bit positions within the IP address act as `network part` or `host part`.
 
-| **Class** | **Network Address** | **First Address** | **Last Address** | **`Subnetmask`** | **CIDR**  | **Subnets** | **IPs**        |
-| --------- | ------------------- | ----------------- | ---------------- | ---------------- | --------- | ----------- | -------------- |
-| **A**     | 1.0.0.0             | 1.0.0.1           | 127.255.255.255  | `255.0.0.0`      | /8        | 127         | 16,777,214 + 2 |
-| **B**     | 128.0.0.0           | 128.0.0.1         | 191.255.255.255  | `255.255.0.0`    | /16       | 16,384      | 65,534 + 2     |
-| **C**     | 192.0.0.0           | 192.0.0.1         | 223.255.255.255  | `255.255.255.0`  | /24       | 2,097,152   | 254 + 2        |
-| **D**     | 224.0.0.0           | 224.0.0.1         | 239.255.255.255  | `Multicast`      | Multicast | Multicast   | Multicast      |
-| **E**     | 240.0.0.0           | 240.0.0.1         | 255.255.255.255  | `reserved`       | reserved  | reserved    | reserved       |
-
-***
+<table data-header-hidden><thead><tr><th width="132"></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Class</strong></td><td><strong>Network Address</strong></td><td><strong>First Address</strong></td><td><strong>Last Address</strong></td><td><strong><code>Subnetmask</code></strong></td><td><strong>CIDR</strong></td><td><strong>Subnets</strong></td><td><strong>IPs</strong></td></tr><tr><td><strong>A</strong></td><td>1.0.0.0</td><td>1.0.0.1</td><td>127.255.255.255</td><td><code>255.0.0.0</code></td><td>/8</td><td>127</td><td>16,777,214 + 2</td></tr><tr><td><strong>B</strong></td><td>128.0.0.0</td><td>128.0.0.1</td><td>191.255.255.255</td><td><code>255.255.0.0</code></td><td>/16</td><td>16,384</td><td>65,534 + 2</td></tr><tr><td><strong>C</strong></td><td>192.0.0.0</td><td>192.0.0.1</td><td>223.255.255.255</td><td><code>255.255.255.0</code></td><td>/24</td><td>2,097,152</td><td>254 + 2</td></tr><tr><td><strong>D</strong></td><td>224.0.0.0</td><td>224.0.0.1</td><td>239.255.255.255</td><td><code>Multicast</code></td><td>Multicast</td><td>Multicast</td><td>Multicast</td></tr><tr><td><strong>E</strong></td><td>240.0.0.0</td><td>240.0.0.1</td><td>255.255.255.255</td><td><code>reserved</code></td><td>reserved</td><td>reserved</td><td>reserved</td></tr></tbody></table>
 
 ### Network and Gateway Addresses
 
