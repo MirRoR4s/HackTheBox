@@ -34,6 +34,7 @@
       * [Remote Desktop Protocols in Linux](readme/linux-fundamentals/linux-networking/remote-desktop-protocols-in-linux.md)
     * [Linux Hardening](readme/linux-fundamentals/linux-hardening/README.md)
       * [Linux Security](readme/linux-fundamentals/linux-hardening/linux-security.md)
+      * [Firewall Setup](readme/linux-fundamentals/linux-hardening/firewall-setup.md)
   * [Introduction to Networking](readme/introduction-to-networking/README.md)
     * [Introduction](readme/introduction-to-networking/introduction/README.md)
       * [Networking Overview](readme/introduction-to-networking/introduction/networking-overview.md)
