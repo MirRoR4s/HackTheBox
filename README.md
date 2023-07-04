@@ -1,3 +1,2 @@
-# Hack The Box Academy
+# Hack The Box Labs
 
-时刻提醒自己，一定要有耐心。
