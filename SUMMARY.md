@@ -12,7 +12,7 @@
     * [Modules](readme/introduction-to-academy/modules.md)
     * [Paths](readme/introduction-to-academy/paths.md)
     * [Conclusion](readme/introduction-to-academy/conclusion.md)
-  * [LINUX FUNDAMENTALS](readme/linux-fundamentals/README.md)
+  * [Linux Fundamentals](readme/linux-fundamentals/README.md)
     * [Introduction](readme/linux-fundamentals/introduction/README.md)
       * [Linux Structure](readme/linux-fundamentals/introduction/linux-structure.md)
     * [The Shell](readme/linux-fundamentals/the-shell.md)
