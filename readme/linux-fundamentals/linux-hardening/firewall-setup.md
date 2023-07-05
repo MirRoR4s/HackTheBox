@@ -108,12 +108,26 @@ The raw table contains two built-in chains: PREROUTING and OUTPUT.
 
 **Chains**
 
-In iptables, chains organize rules that define how network traffic should be filtered or modified. There are two types of chains in iptables:
+In iptables, chains organize rules that define how network traffic should be filtered or modified.&#x20;
+
+
+
+There are two types of chains in iptables:
+
+
 
 * Built-in chains
 * User-defined chains
 
-The built-in chains are pre-defined and automatically created when a table is created. Each table has a different set of built-in chains. For example, the filter table has three built-in chains:
+The built-in chains are pre-defined and automatically created when a table is created.&#x20;
+
+
+
+Each table has a different set of built-in chains.&#x20;
+
+
+
+For example, the filter table has three built-in chains:
 
 * INPUT
 * OUTPUT
@@ -124,7 +138,15 @@ These chains are used to filter incoming and outgoing network traffic, as well a
 * PREROUTING
 * POSTROUTING
 
-The PREROUTING chain is used to modify the destination IP address of incoming packets before the routing table processes them. The POSTROUTING chain is used to modify the source IP address of outgoing packets after the routing table has processed them. The mangle table has five built-in chains:
+The PREROUTING chain is used to modify the destination IP address of incoming packets before the routing table processes them.&#x20;
+
+
+
+The POSTROUTING chain is used to modify the source IP address of outgoing packets after the routing table has processed them.&#x20;
+
+
+
+The mangle table has five built-in chains:
 
 * PREROUTING
 * OUTPUT
