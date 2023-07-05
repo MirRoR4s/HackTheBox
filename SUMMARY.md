@@ -15,6 +15,8 @@
   * [Linux Fundamentals](readme/linux-fundamentals/README.md)
     * [Introduction](readme/linux-fundamentals/introduction/README.md)
       * [Linux Structure](readme/linux-fundamentals/introduction/linux-structure.md)
+      * [Linux Distributions](readme/linux-fundamentals/introduction/linux-distributions.md)
+      * [Introduction to Shell](readme/linux-fundamentals/introduction/introduction-to-shell.md)
     * [The Shell](readme/linux-fundamentals/the-shell.md)
     * [Workflow](readme/linux-fundamentals/workflow/README.md)
       * [Regular Expressions](readme/linux-fundamentals/workflow/regular-expressions.md)
