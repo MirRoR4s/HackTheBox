@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hack The Box Academy](README.md)
+* [HTB打靶记录](README.md)
   * [前言](readme/qian-yan.md)
   * [LEARNING PROCESS](readme/learning-process/README.md)
     * [Mindset](readme/learning-process/mindset/README.md)
