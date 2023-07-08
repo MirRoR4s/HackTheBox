@@ -1,2 +1,0 @@
-# Occam's Razor
-

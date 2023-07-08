@@ -1,2 +1,0 @@
-# Interactive Section with Target
-

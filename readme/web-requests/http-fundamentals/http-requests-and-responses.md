@@ -1,2 +1,0 @@
-# HTTP Requests and Responses
-

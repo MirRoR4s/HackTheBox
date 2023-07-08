@@ -1,2 +1,0 @@
-# HyperText Transfer Protocol (HTTP)
-
