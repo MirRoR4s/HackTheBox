@@ -26,7 +26,7 @@ WP链接：https://pan.baidu.com/s/13El59kBySo8siPub1DPnIg?pwd=pmlw 提取码：
 
 匿名登录之后发现一个备份文件，使用 get 命令下载即可。
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 然后我们利用 unzip 解压：
 
@@ -38,7 +38,7 @@ WP链接：https://pan.baidu.com/s/13El59kBySo8siPub1DPnIg?pwd=pmlw 提取码：
 
 John the Ripper 已经预装在 kali 和 parrot 上，但如果你使用的是其他的操作系统，那么可以通过如下方式安装该工具：
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 安装完毕之后，输入以下命令查看相关用法：
 
@@ -56,7 +56,7 @@ john -wordlist=/usr/share/wordlists/rockyou.txt hashes
 
 该命令会加载密码字典并针对 hashes 文件里的哈希进行暴力攻击，爆破成功之后使用 --show 选项查看密码：
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (1).png>)
 
 如上图，密码是：741852963，使用这个密码解压压缩包。
 
