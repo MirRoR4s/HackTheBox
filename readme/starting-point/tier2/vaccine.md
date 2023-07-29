@@ -1,6 +1,8 @@
 # Vaccine
 
-WP链接：https://pan.baidu.com/s/13El59kBySo8siPub1DPnIg?pwd=pmlw 提取码：pmlw
+
+
+{% file src="../../../.gitbook/assets/bc983cf4-f09d-44a4-a126-ab0792c37bf4.pdf" %}
 
 ### 前言
 
